@@ -48,8 +48,9 @@
   - $a^{-y}=\frac{1}{a^{y}}$
   - $a^{xy}=(a^x)^y$
   - $a^{\log_ax}=x$
+  - $a^x>0\forall x$
 - **Logaritmica** $\Rarr f(x)=log_ax$
   - $a$: base
 <!--TODO: completar apuntes log-->
   
-- **Valor absolur** $\Rarr f(x)=|x|=\{x \forall x >=0; -x\forall <=0}$
+- **Valor absoluto** $\Rarr f(x)=|x|=\{x\ \forall\ x \geq0; -x\ \forall\ x \leq0\}$
