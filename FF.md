@@ -13,4 +13,19 @@
 
 * Requerido
   * Álgebra básica
-  * 
+  * Funciones básicas
+     * Quadràtica
+     * Exponenciales
+     * Logarítmica
+  * Trigonometría
+* Recomendado
+  * Derivadas
+  * Concepto límite
+  * Integrales
+
+## Vectores
+
+### Producto escalar
+* $\overrightarrow{v}\dot\overrightarrow{u}=v_xu_x+v_yu_y+v_zu_z$
+* 
+
