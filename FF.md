@@ -27,5 +27,7 @@
 
 ### Producto escalar
 * $\overrightarrow{v}\dot\overrightarrow{u}=v_xu_x+v_yu_y+v_zu_z$
-* 
+* Proyección de un vector sobre otro
+### Producto Vectorial
+* $î\cross 
 
