@@ -11,3 +11,6 @@
 
 ## Mates
 
+* Requerido
+  * Álgebra básica
+  * 
