@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\..\\code\\pynote"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "pynote"
+	}
+}
