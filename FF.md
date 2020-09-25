@@ -77,6 +77,8 @@ $$
 
 ### Componentes Intrinsicas aceleración
 
-
+$$
+\frac{d|\overrightarrow{v}|}{dt}=\frac{d}{dt}\sqrt{v_x^2+v_y^2+v_z^2}=\\=\frac{d}{dt}\sqrt{v_x(t)^2+v_y(t)^2+v_z(t)^2}=\frac{1}{2|\overrightarrow{v}}\frac{d}{dt}(v_x^2+v_y^2+v_z^2)=\\=\overrightarrow{a}·\frac{\overrightarrow{v}}{|\overrightarrow{v}|}
+$$
 
 ### Movimiento circular
