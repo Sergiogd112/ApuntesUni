@@ -44,14 +44,18 @@ c)Es vol configurar una de les sortides amb una tensió de 5 V i un límit de co
 ### Componentes
 
 #### Generico
+
 - $P>0$ Libera energia
 - $P<0$ Absorve energia
-![Generico](Imagenes/ELTEL/schematic-symbols-resistor-europe.png)
+  ![Generico](Imagenes/ELTEL/schematic-symbols-resistor-europe.png)
+
 #### Resistencia
 
 ![Resistencia](Imagenes/ELTEL/schematic-symbols-resistor-europe.png) ![Resistencia](Imagenes/ELTEL/schematic-symbols-resistor-america.png)
 
-#### Circuito abierti
+#### Circuito abierto
+
+![Circuito abierto](Imagenes/ELTEL/opencircuit.svg)
 
 #### Corto circuito
 
