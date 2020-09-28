@@ -8,10 +8,12 @@
   - objeto matemàtico q asigna a cada $A$ un **único** num $\in \R$
     - Ej: $f(x)=x^2$
   - Toda f permite una representación en el plano cómo curva
-    ![curva de una función en el plano](grafica-funcion-continua.png)
+
+![curva de una función en el plano](grafica-funcion-continua.png)
+
   - Ergo:
     - $f(x)=x \Rightarrow$ funció
-    - $y=x^2 \Rarr$ curva en el plano de ![f(x)](#prev)
+    - $y=x^2 \Rarr$ curva en el plano de f(x) <!-- ![f(x)](#prev) -->
   - Toda curva tiene una función asociada?
     - NO, pero se puede describir como un conjunto de estas
 
@@ -51,6 +53,29 @@
   - $a^x>0\forall x$
 - **Logaritmica** $\Rarr f(x)=log_ax$
   - $a$: base
-<!--TODO: completar apuntes log-->
+  - $Dom\ f=(0,+\infty); Img\ f= (-\infty,+\infty)$
+  - $a>1$
+    - $\log_ax<0$ si $0<x<1$
+    - $\log_ax>0$ si $1<x$
+  - $a<1$
+    - $\log_ax<0$ si $x>1$
+    - $\log_ax>0$ si $1<1$
+  - $\log_a1=0$
+  - $\log_auv=\log_au+\log_av$
+  - $\log_a\frac{1}{v}=-\log_av$
+  - $\log_au^v=v\log_au$
+  - $\log_ax=\frac{\log_bx}{\log_ba}$
+  - $\log_aa^x=x$
+  - $\log_ax$ no $\exist$ si $x\leq0$
   
 - **Valor absoluto** $\Rarr f(x)=|x|=\{x\ \forall\ x \geq0; -x\ \forall\ x \leq0\}$
+  - $Dom\ f=\R; Img\ f= [ 0,+\infty)$
+  - $|x|=|-x|$
+  - $|x|=0\iff x=0$
+  - $|x|=c\Rarr, c\geq0 x=\plusmn c$
+  - $|x|=y\Rarr x=\plusmn y$
+  - $|x|\leq c, c\geq 0 \iff -c\leq x\leq c$
+  - $|x|\geq c, x\geq c o x\leq -c$
+  - $|x+y|\leq|x|+|y|$
+- **Trigonométricas**
+  - Radianes
