@@ -16,7 +16,7 @@
 
 #### Formas Numeros complejos
 
-![Plano complejo](Complex_number_illustration.svg.png)
+![Plano complejo](Imagenes/AG/Complex_number_illustration.svg.png)
 
 - **Forma Binomica**: $z_1=a+bj$
   - Parte Real: $a$

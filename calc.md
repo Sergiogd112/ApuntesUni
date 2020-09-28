@@ -1,5 +1,23 @@
 # Calculo
 
+## Indice
+
+- [Calculo](#calculo)
+  - [Indice](#indice)
+  - [Documentos](#documentos)
+  - [T1 Funciones](#t1-funciones)
+    - [Intro](#intro)
+    - [Parametricación función](#parametricación-función)
+      - [Dominio](#dominio)
+      - [Imagen](#imagen)
+      - [Funcions elementals](#funcions-elementals)
+
+## Documentos
+
+- [Funciones Elementales](Documentos/CALC/Funcions_elementals.pdf)
+- [Llista total excecicis](Documentos/CALC/Llista%20total%20exercicis.pdf)
+- [T1 Equacions i grafiques](Documentos/CALC/T1_Equacions_i_grafiques-c.pdf)
+
 ## T1 Funciones
 
 ### Intro
@@ -9,11 +27,11 @@
     - Ej: $f(x)=x^2$
   - Toda f permite una representación en el plano cómo curva
 
-![curva de una función en el plano](grafica-funcion-continua.png)
+![curva de una función en el plano](Imagenes/ELTEL/grafica-funcion-continua.png)
 
   - Ergo:
-    - $f(x)=x \Rightarrow$ funció
-    - $y=x^2 \Rarr$ curva en el plano de f(x) <!-- ![f(x)](#prev) -->
+    - $f(x)=x \Rightarrow$ <a name="#funció">funció</a>
+    - $y=x^2 \Rarr$ curva en el plano de [f(x)](#función)
   - Toda curva tiene una función asociada?
     - NO, pero se puede describir como un conjunto de estas
 
@@ -28,7 +46,7 @@
 
 - $Im \ f=\{y\in\R;\ y=f(x),\ \forall x \in f(x)\}$
 
-#### Funcions **elementals**
+#### Funcions elementals
 
 - **Lineal** $\Rarr f(x)=mx$
   - $m$: pendiente
@@ -38,7 +56,7 @@
 - **Polinómica** $\Rarr f(x)=a_nx^n+a_{n-1}x^{n-1}+\dots+a_1x+a_0$
   - $a_i \in \R, \forall i$
 - **Exponencial** $\Rarr f(x)=a^x$
-  - $Dom\ f=(-\infty,\infty);Im\ f=(0\infty)$ <!-- TODO: preguntar caso $a<0$ -->
+  - $Dom\ f=(-\infty,\infty);Im\ f=(0\infty)$ 
   - $a>1$
     - $x>0 \Rarr a^x<1$
     - $x<0 \Rarr a^x>1$
