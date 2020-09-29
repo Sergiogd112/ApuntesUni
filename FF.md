@@ -1,5 +1,22 @@
 # Fonaments de la física
 
+- [Fonaments de la física](#fonaments-de-la-física)
+  - [Intro](#intro)
+  - [Mates](#mates)
+  - [Vectores](#vectores)
+    - [Producto escalar](#producto-escalar)
+    - [Producto Vectorial](#producto-vectorial)
+  - [Cinemática](#cinemática)
+    - [Velocidad, Acceleración Promedio y Medidias semi-instantanea](#velocidad-acceleración-promedio-y-medidias-semi-instantanea)
+      - [Velocidad](#velocidad)
+      - [Acceleración](#acceleración)
+      - [Acceleración a Velocidad](#acceleración-a-velocidad)
+    - [Velocidad i acceleración instantanea](#velocidad-i-acceleración-instantanea)
+    - [Componentes Intrinsicas aceleración](#componentes-intrinsicas-aceleración)
+    - [Movimiento circular](#movimiento-circular)
+
+## Intro
+
 | Mecánica                   | Electromagnétismo        |
 | -------------------------- | ------------------------ |
 | Cinemática                 | Electrostática           |

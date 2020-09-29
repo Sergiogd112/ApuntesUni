@@ -11,6 +11,7 @@
       - [Dominio](#dominio)
       - [Imagen](#imagen)
       - [Funcions elementals](#funcions-elementals)
+    - [Limites, continuidad i asímptotes](#limites-continuidad-i-asímptotes)
 
 ## Documentos
 
@@ -97,3 +98,17 @@
   - $|x+y|\leq|x|+|y|$
 - **Trigonométricas**
   - Radianes
+  - $\cos(x)=\frac{e^{jx}+e^{-jx}}{2}$
+  - $\sin(x)=\frac{e^{jx}-e^{-jx}}{2j}$
+  - $\tan(x)=\frac{\sin(x)}{\cos(x)}$
+- **Hiperbólicas**
+  - $\cosh(x)=\frac{e^x+e^{-x}}{2}$ ![cosh](Imagenes/CALC/Cosh.svg.png)
+  - $\sinh(x)=\frac{e^x-e^{-x}}{2}$ ![sinh](Imagenes/CALC/Sinh_plot_real.png)
+  - $\tanh(x)=\frac{\sin(x)}{\cosh(x)}=\frac{e^x-e^{-x}}{e^x+e^{-x}}$ ![tanh](Imagenes/CALC/640px-Hyperbolic_Tangent.svg.png)
+  - $\cosh²x-\sinh²x=1$
+
+### Limites, continuidad i asímptotes
+
+[Power](Documentos/CALC/T1_Equacions_i_grafiques-c.pdf)
+
+

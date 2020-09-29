@@ -37,7 +37,10 @@
   
 
 $e^{j\theta} = \cos{\theta}+j\sin{\theta}$
-
+#### Operaciones
+- **Raiz**$\Rarr\sqrt[n]{Z}=z^{\frac{1}{n}}$
+  - n soluciones
+  - $\sqrt[n]{Z}=z^{\frac{1}{n}}=w\Rarr z=w^n\Rarr re^{j\theta}=x^ne^{jny}\\x=\sqrt[n]{r}\\ny=\theta + 2k\pi\\\sqrt[n]{z}=\sqrt[n]{r}e^{j\frac{\theta + 2k\pi}{n}} \forall k\in \N\ U\ \{0\} ;k<n$
 ### Descomposición factoriales
 
 ## Matrices y sistemas lineales

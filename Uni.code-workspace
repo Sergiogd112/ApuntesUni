@@ -4,10 +4,11 @@
 			"path": "."
 		},
 		{
-			"path": "..\\..\\code\\pynote"
+			"name": "pynote",
+			"path": "../pynote"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "pynote"
+		"liveServer.settings.multiRootWorkspaceName": "ApuntesUni"
 	}
 }
