@@ -1,11 +1,23 @@
 # ApuntesUni
 
+![Horario](Imagenes/horario.png)
+
 Estos son mis apuntes y documentos de practicas
-[Root](https://htmlpreview.github.io/?https://github.com/Sergiogd112/ApuntesUni/blob/master/)
 - Algebra y Geometria
-  - [html](https://htmlpreview.github.io/?https://github.com/Sergiogd112/ApuntesUni/blob/master/AG.html)
+  - [html](AG.html)
   - [markdown](AG.md)
 - Calculo
-  - [html](https://htmlpreview.github.io/?https://github.com/Sergiogd112/ApuntesUni/blob/master/calc.html)
+  - [html](calc.html)
   - [markdown](calc.md)
-- 
+- Electronica en telecomunicaciones
+  - [html](ELTEL.html)
+  - [markdown](ELTEL.md)
+- Empresa
+  - [html](EMP.html)
+  - [markdown](EMP.md)
+- Fundamentos de física
+  - [html](FF.html)
+  - [markdown](FF.md)
+- Quimica
+  - [html](Quim.html)
+  - [markdown](Quim.md)
