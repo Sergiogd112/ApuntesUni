@@ -30,11 +30,11 @@
 
 ![curva de una función en el plano](Imagenes/ELTEL/grafica-funcion-continua.png)
 
-  - Ergo:
-    - $f(x)=x \Rightarrow$ <a name="#funció">funció</a>
-    - $y=x^2 \Rarr$ curva en el plano de [f(x)](#función)
-  - Toda curva tiene una función asociada?
-    - NO, pero se puede describir como un conjunto de estas
+- Ergo:
+  - $f(x)=x \Rightarrow$ <a name="#funció">funció</a>
+  - $y=x^2 \Rarr$ curva en el plano de [f(x)](#función)
+- Toda curva tiene una función asociada?
+  - NO, pero se puede describir como un conjunto de estas
 
 ### Parametricación función
 
@@ -57,7 +57,7 @@
 - **Polinómica** $\Rarr f(x)=a_nx^n+a_{n-1}x^{n-1}+\dots+a_1x+a_0$
   - $a_i \in \R, \forall i$
 - **Exponencial** $\Rarr f(x)=a^x$
-  - $Dom\ f=(-\infty,\infty);Im\ f=(0\infty)$ 
+  - $Dom\ f=(-\infty,\infty);Im\ f=(0\infty)$
   - $a>1$
     - $x>0 \Rarr a^x<1$
     - $x<0 \Rarr a^x>1$
@@ -86,7 +86,6 @@
   - $\log_ax=\frac{\log_bx}{\log_ba}$
   - $\log_aa^x=x$
   - $\log_ax$ no $\exist$ si $x\leq0$
-  
 - **Valor absoluto** $\Rarr f(x)=|x|=\{x\ \forall\ x \geq0; -x\ \forall\ x \leq0\}$
   - $Dom\ f=\R; Img\ f= [ 0,+\infty)$
   - $|x|=|-x|$
@@ -110,5 +109,3 @@
 ### Limites, continuidad i asímptotes
 
 [Power](Documentos/CALC/T1_Equacions_i_grafiques-c.pdf)
-
-

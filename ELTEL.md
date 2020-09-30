@@ -1,5 +1,28 @@
 # Electronica de telecomunicaciones
 
+## Index
+
+- [Electronica de telecomunicaciones](#electronica-de-telecomunicaciones)
+  - [Index](#index)
+  - [Laboratorio](#laboratorio)
+    - [Practica 1](#practica-1)
+      - [Preg 0](#preg-0)
+      - [Preg 1](#preg-1)
+      - [Preg 2](#preg-2)
+      - [Preg 3](#preg-3)
+      - [Preg 6](#preg-6)
+  - [Teoria](#teoria)
+    - [Análisis de circuitos](#análisis-de-circuitos)
+    - [Componentes](#componentes)
+      - [Generico](#generico)
+      - [Resistencia](#resistencia)
+      - [Circuito abierto](#circuito-abierto)
+      - [Corto circuito](#corto-circuito)
+      - [Condensadores](#condensadores)
+      - [Bobina/Inductor](#bobinainductor)
+      - [Fuente ideal de tensión](#fuente-ideal-de-tensión)
+      - [Fuente ideal de corriente](#fuente-ideal-de-corriente)
+
 ## Laboratorio
 
 ### Practica 1

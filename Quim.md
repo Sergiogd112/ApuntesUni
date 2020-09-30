@@ -1,5 +1,18 @@
 # Quimica
 
+- [Quimica](#quimica)
+  - [Principis Generals de la Quimica](#principis-generals-de-la-quimica)
+    - [Transport aeri](#transport-aeri)
+    - [La materia](#la-materia)
+    - [Estats de la matéria](#estats-de-la-matéria)
+    - [Disolucions](#disolucions)
+    - [Gasos ideals](#gasos-ideals)
+    - [Estructura atòmica](#estructura-atòmica)
+    - [Propietats periodiques dels elements químics](#propietats-periodiques-dels-elements-químics)
+    - [Enllaç químic](#enllaç-químic)
+    - [Estructura molecular](#estructura-molecular)
+    - [Propietats dels compostos químics](#propietats-dels-compostos-químics)
+
 ## Principis Generals de la Quimica
 
 ciencia que estudia la matéria i les seves transformacions
