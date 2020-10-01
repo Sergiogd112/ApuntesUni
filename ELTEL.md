@@ -106,7 +106,7 @@ Respecte a les resistències d’1 kΩ i d’1 MΩ.
 
 a.Busqueu un parell de cadascuna en el vostre material.[ x ]
 b.Identifiqueu la tolerància i anoteu l’interval de valors possibles.
-<!-- TODO -->
+$\plusmn5\%$ en el caso de las dos
 c.Descriviu com connectar i configurar el MD per a mesurar les resistències.
 
 Conectem els terminals al negatiu al port am el simbol $\Omega$, posem la roda en $4k\Omega$ en el cas de la resistència de $1k\Omega$ i $4M\Omega$ en el cas de la de $1M\Omega$ i els extrems dels cables als terminals de la resistencia.

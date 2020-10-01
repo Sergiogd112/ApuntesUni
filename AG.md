@@ -45,6 +45,10 @@ $e^{j\theta} = \cos{\theta}+j\sin{\theta}$
 
 ## Matrices y sistemas lineales
 
+- **mef**$\Rarr$ matriz escalonada por filas$\Rarr$ ref$\Rarr$ Gauss(filas)
+- **merf**$\Rarr$ matriz escalonada por filas$\Rarr$ rref$\Rarr$ Gauss-Jordan
+- **Rango**$\Rarr$
+
 ## Espacios vectoriales
 
 ## Aplicacions lineales

@@ -12,6 +12,7 @@
       - [Imagen](#imagen)
       - [Funcions elementals](#funcions-elementals)
     - [Limites, continuidad i asímptotes](#limites-continuidad-i-asímptotes)
+    - [Funciones cóniques](#funciones-cóniques)
 
 ## Documentos
 
@@ -103,9 +104,19 @@
 - **Hiperbólicas**
   - $\cosh(x)=\frac{e^x+e^{-x}}{2}$ ![cosh](Imagenes/CALC/Cosh.svg.png)
   - $\sinh(x)=\frac{e^x-e^{-x}}{2}$ ![sinh](Imagenes/CALC/Sinh_plot_real.png)
-  - $\tanh(x)=\frac{\sin(x)}{\cosh(x)}=\frac{e^x-e^{-x}}{e^x+e^{-x}}$ ![tanh](Imagenes/CALC/640px-Hyperbolic_Tangent.svg.png)
+  - $\tanh(x)=\frac{\sin(x)}{\cosh(x)}=\frac{e^x-e^{-x}}{e^x+e^{-x}}$![tanh](Imagenes/CALC/640px-Hyperbolic_Tangent.svg.png)
   - $\cosh²x-\sinh²x=1$
 
 ### Limites, continuidad i asímptotes
 
 [Power](Documentos/CALC/T1_Equacions_i_grafiques-c.pdf)
+
+### Funciones cóniques
+
+- Circunferencia
+  - Lugar geometrico de los puntos del plano situados a distancia r de un un punto fijo (a,b)
+  - $R\rarr$ radio
+  - $O=(a,b)\rarr$ centro
+  - $c={(x,y)\in \R²;d((x,y),(a,b))=R}$
+  - $(x-a)²+(y-b)²=R²\Rarr x²+y²-2ax-2by+a+b-R²=0\Rarr x²+y²+Ax+By+C=0$
+  - No todas las eq de la última forma definen una circunferencia

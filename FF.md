@@ -14,6 +14,7 @@
     - [Velocidad i acceleración instantanea](#velocidad-i-acceleración-instantanea)
     - [Componentes Intrinsicas aceleración](#componentes-intrinsicas-aceleración)
     - [Movimiento circular](#movimiento-circular)
+  - [Leyes de Newton](#leyes-de-newton)
 
 ## Intro
 
@@ -99,3 +100,13 @@ $$
 $$
 
 ### Movimiento circular
+
+- $|\overrightarrow{r(t)}|=R$
+- $R, \theta(t)$
+  - $\overrightarrow{r}(t)= R(\cos(\theta(t)),\sin\theta(t))$
+  - $\overrightarrow{v}=R\frac{d\theta}{dt}(-\sin\theta(t),\cos\theta(t))=R\omega(-\sin\theta(t),\cos\theta(t))$
+  - $\overrightarrow{a}=R\frac{d²\theta}{dt²}(-\sin\theta(t),\cos\theta(t))+R\omega(-\cos\theta(t),-\sin\theta(t))$
+
+
+## Leyes de Newton
+
