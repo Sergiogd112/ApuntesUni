@@ -15,6 +15,9 @@
     - [Componentes Intrinsicas aceleración](#componentes-intrinsicas-aceleración)
     - [Movimiento circular](#movimiento-circular)
   - [Leyes de Newton](#leyes-de-newton)
+    - [Primera](#primera)
+    - [Segunda](#segunda)
+    - [Tercera](#tercera)
 
 ## Intro
 
@@ -109,4 +112,26 @@ $$
 
 
 ## Leyes de Newton
+
+### Primera
+
+Un cuerpo no sometido a impulsos sigue una trayectoria rectilínea a velocidad constante siempre ques estes en un sistema de referencia no inercial.
+
+### Segunda
+
+- Un objeto sometido a un impulso(caracter vectorial) cambia la velocidad.
+
+- $\overrightarrow{F}=\frac{d\overrightarrow{p}}{dt}$ si $m=ctt\Rarr \overrightarrow{F}=m\overrightarrow{a}$ en un SRI
+
+- Fuerzas conocidas en el sXVII:
+  - Gravedad
+    - $\overrightarrow{F}_T=m_gg=ma\Rarr g=a \Rarr \overrightarrow{F}=m\overrightarrow{g}$
+  - Normal
+  - Fricción
+  - Cuerdas
+  - Elastica
+  - Animal
+
+### Tercera
+
 

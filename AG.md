@@ -48,6 +48,14 @@ $e^{j\theta} = \cos{\theta}+j\sin{\theta}$
 - **mef**$\Rarr$ matriz escalonada por filas$\Rarr$ ref$\Rarr$ Gauss(filas)
 - **merf**$\Rarr$ matriz escalonada por filas$\Rarr$ rref$\Rarr$ Gauss-Jordan
 - **Rango**$\Rarr$
+  - Combinacion lineal de filas
+  - Independencia lineal
+    - 2 filas: $\{f_i,f_j\}$
+      - No: $f_j=\lambda f_i$
+      - Si: otherwise
+    - 3 filas:
+      - No $f_k=\alpha f_i +\beta f_j$
+      - Si: otherwise
 
 ## Espacios vectoriales
 
