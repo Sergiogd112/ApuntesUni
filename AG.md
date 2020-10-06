@@ -41,9 +41,10 @@ $e^{j\theta} = \cos{\theta}+j\sin{\theta}$
 - **Raiz**$\Rarr\sqrt[n]{Z}=z^{\frac{1}{n}}$
   - n soluciones
   - $\sqrt[n]{Z}=z^{\frac{1}{n}}=w\Rarr z=w^n\Rarr re^{j\theta}=x^ne^{jny}\\x=\sqrt[n]{r}\\ny=\theta + 2k\pi\\\sqrt[n]{z}=\sqrt[n]{r}e^{j\frac{\theta + 2k\pi}{n}} \forall k\in \N\ U\ \{0\} ;k<n$
+
 ### Descomposición factoriales
 
-## Matrices y sistemas lineales
+## Matrices
 
 - **mef**$\Rarr$ matriz escalonada por filas$\Rarr$ ref$\Rarr$ Gauss(filas)
 - **merf**$\Rarr$ matriz escalonada por filas$\Rarr$ rref$\Rarr$ Gauss-Jordan
@@ -56,6 +57,15 @@ $e^{j\theta} = \cos{\theta}+j\sin{\theta}$
     - 3 filas:
       - No $f_k=\alpha f_i +\beta f_j$
       - Si: otherwise
+- **Regular:** $r(A)=n\iff det(A)\neq0\iff MEF_A=I_n\iff$ tiene inversa
+  - $\begin{pmatrix}
+    2&-1\\-5&3
+  \end{pmatrix}$
+- **Singular**2&-1\\-5&3:$r(A)<n\iff det(A)=0\iff MEF_A$ tiene fila nula
+
+## sistemas lineales
+
+  
 
 ## Espacios vectoriales
 
