@@ -120,3 +120,44 @@
   - $c={(x,y)\in \R²;d((x,y),(a,b))=R}$
   - $(x-a)²+(y-b)²=R²\Rarr x²+y²-2ax-2by+a+b-R²=0\Rarr x²+y²+Ax+By+C=0$
   - No todas las eq de la última forma definen una circunferencia
+- Parabola
+  - Lugar geometrico de los puntos del plano que eqidistan de un punto fijo llamado foco y una recta llamada directriz
+  - Punto inferior se denomina vertize
+  - Tiene un eje de simetria
+  - $P:=\{(x,y)\in\R^2;d((x,y),F)=d((x,y),r)$
+  - $y=ax^2\Rarr$Parabola vertical
+    - vertice(0,0)
+    - eje simm$\Rarr$ y
+  - $y-y_0=a(x-x_0)^2$
+    - Equación canconica parabola
+    - eje sim $x=x_0$
+    - vertice $(x_0,y_0)$
+  - Equación general:
+    - Desarrollando quadrados llegamos a
+      - $y=ax^2+bx^2+c$
+      - vertice en $x_0=\frac{-b}{2a}$
+- Elipse
+  - Lugar geometrico equidistante a dos puntos denominados focos
+  - $E:=\{(x,y)\in \R^2;d((x,y),F)+d((x,y),F')=k$
+  - $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$
+  - 4 vertices
+    - $(\plusmn a,0)$
+    - $(0,\plusmn b)$
+  - Centro $(x_0,y_0)$
+  - $\frac{(x-x_0)^2}{a^2}+\frac{(y-y_0)^2}{b^2}=1$
+- Hiperbola
+  - Lugar geometrico de los puntos del plano tales que el valor absoluto de la diferencia de sus distancas a dos puntos fijos llamados focos es constante
+  - $H:=\{(x,y)\in \R^2;|d((x,y),F)-d((x,y),F')|=k\}$
+  - $|\frac{x^2}{a^2}-\frac{y^2}{b^2}|=k$
+    - horizontal
+    - vertice$\Rarr(\plusmn a,0)$
+  - $|\frac{y^2}{b^2}-\frac{x^2}{a^2}|=k$
+    - vertical
+    - Vertcices$\Rarr (0,\plusmn b)$
+  - Centro$\rarr(x_0,y_0)$
+    - Horizontal
+      - $\frac{(x-x_0)^2}{a^2}-\frac{(y-y_0)^2}{b^2}=1$
+    - Vertcical
+      - $\frac{(y-y_0)^2}{a^2}-\frac{(x-x_0)^2}{b^2}=1$
+  - Equilateras
+  - $y=\frac{k}{x}$
