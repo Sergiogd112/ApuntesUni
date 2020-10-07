@@ -11,6 +11,8 @@
   - [Transport aeri](#transport-aeri)
     - [Intro](#intro)
     - [KPIs](#kpis)
+    - [Tratatados](#tratatados)
+      - [Llibertades](#llibertades)
     - [Gestion aeropuertos y econo](#gestion-aeropuertos-y-econo)
     - [Gestion aeropuertos: Demanda y beneficios](#gestion-aeropuertos-demanda-y-beneficios)
     - [Gestion aeropuertos: costos y beneficios](#gestion-aeropuertos-costos-y-beneficios)
@@ -74,7 +76,7 @@ Digitalizar sector
 - escala tecnica
 - aero de A a pais B
 - aero de A salga de B a A
--
+- OACI
 
 ### Gestion aeropuertos y econo
 
