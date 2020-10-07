@@ -13,6 +13,9 @@
       - [Funcions elementals](#funcions-elementals)
     - [Limites, continuidad i asímptotes](#limites-continuidad-i-asímptotes)
     - [Funciones cóniques](#funciones-cóniques)
+  - [Derivadas](#derivadas)
+    - [Condepto](#condepto)
+    - [Regla cadena](#regla-cadena)
 
 ## Documentos
 
@@ -161,3 +164,11 @@
       - $\frac{(y-y_0)^2}{a^2}-\frac{(x-x_0)^2}{b^2}=1$
   - Equilateras
   - $y=\frac{k}{x}$
+
+## Derivadas
+
+### Condepto
+
+### Regla cadena
+
+
