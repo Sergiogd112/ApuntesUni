@@ -69,4 +69,6 @@ $e^{j\theta} = \cos{\theta}+j\sin{\theta}$
 
 ## Espacios vectoriales
 
+
+
 ## Aplicacions lineales
