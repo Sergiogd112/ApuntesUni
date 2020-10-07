@@ -6,6 +6,10 @@
 		{
 			"name": "pynote",
 			"path": "../pynote"
+		},
+		{
+			"name": "virtdesk-setup",
+			"path": "../../virtdesk-setup"
 		}
 	],
 	"settings": {
