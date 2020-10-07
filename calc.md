@@ -17,6 +17,7 @@
     - [Concepto](#concepto)
     - [Regla cadena](#regla-cadena)
     - [Derivación logarítmica](#derivación-logarítmica)
+    - [Regla Hopial](#regla-hopial)
 
 ## Documentos
 
@@ -176,5 +177,8 @@
 
 $h'=f^g(g'\ln f+g\frac{f'}{f})$
 
+### Regla Hopial
+
+$\underset{x\to a}{\lim}\frac{f(x)}{g(x)}\rarr\underset{x\to a}{\lim}\frac{f'(x)}{g'(x)}$
 
 
