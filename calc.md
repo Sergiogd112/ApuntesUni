@@ -16,6 +16,7 @@
   - [Derivadas](#derivadas)
     - [Condepto](#condepto)
     - [Regla cadena](#regla-cadena)
+    - [Derivación logarítmica](#derivación-logarítmica)
 
 ## Documentos
 
@@ -171,4 +172,7 @@
 
 ### Regla cadena
 
+### Derivación logarítmica
+
+$h'=f^g(g'\ln f+g\frac{f'}{f})$
 
