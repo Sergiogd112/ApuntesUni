@@ -6,7 +6,12 @@
         {
             "label": "update",
             "type": "shell",
-            "command": "git stage .; git commit -m\"Update\";git push"
+            "command": "git stage .; git commit -m\"Update\";git push",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
