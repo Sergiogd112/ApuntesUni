@@ -62,6 +62,12 @@ Digitalizar sector
 - TN
 - RTK$=TN*Km$
 
+### Tratatados
+
+- Tratado de Barsovia
+
+- Tratado de Chicago
+
 ### Gestion aeropuertos y econo
 
 ### Gestion aeropuertos: Demanda y beneficios
