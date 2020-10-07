@@ -68,6 +68,14 @@ Digitalizar sector
 
 - Tratado de Chicago
 
+#### Llibertades
+
+- sobrevuelo
+- escala tecnica
+- aero de A a pais B
+- aero de A salga de B a A
+-
+
 ### Gestion aeropuertos y econo
 
 ### Gestion aeropuertos: Demanda y beneficios
