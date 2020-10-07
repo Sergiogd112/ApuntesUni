@@ -1,0 +1,74 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	1600 5550 1400 5550
+$Comp
+L Device:Amperemeter_DC MES?
+U 1 1 5F7E3B06
+P 2500 5850
+F 0 "MES?" H 2653 5896 50  0000 L CNN
+F 1 "Amperemeter_DC" H 2653 5805 50  0000 L CNN
+F 2 "" V 2500 5950 50  0001 C CNN
+F 3 "~" V 2500 5950 50  0001 C CNN
+	1    2500 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F7E8191
+P 2200 5550
+F 0 "R2" V 1993 5550 50  0000 C CNN
+F 1 "1000" V 2084 5550 50  0000 C CNN
+F 2 "" V 2130 5550 50  0001 C CNN
+F 3 "~" H 2200 5550 50  0001 C CNN
+	1    2200 5550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1900 5550 2050 5550
+Wire Wire Line
+	2350 5550 2500 5550
+Wire Wire Line
+	2500 5550 2500 5650
+$Comp
+L Device:R R1
+U 1 1 5F7E09EE
+P 1750 5550
+F 0 "R1" V 1543 5550 50  0000 C CNN
+F 1 "1000" V 1634 5550 50  0000 C CNN
+F 2 "" V 1680 5550 50  0001 C CNN
+F 3 "~" H 1750 5550 50  0001 C CNN
+	1    1750 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Battery_Cell BT!
+U 1 1 5F7EA385
+P 1400 5900
+F 0 "BT!" H 1518 5996 50  0000 L CNN
+F 1 "5" H 1518 5905 50  0000 L CNN
+F 2 "" V 1400 5960 50  0001 C CNN
+F 3 "~" V 1400 5960 50  0001 C CNN
+	1    1400 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 5550 1400 5700
+Wire Wire Line
+	1400 6000 1400 6050
+Wire Wire Line
+	1400 6050 2500 6050
+$EndSCHEMATC

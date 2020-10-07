@@ -10,6 +10,7 @@
       - [Preg 1](#preg-1)
       - [Preg 2](#preg-2)
       - [Preg 3](#preg-3)
+      - [Preg 5](#preg-5)
       - [Preg 6](#preg-6)
   - [Teoria](#teoria)
     - [Análisis de circuitos](#análisis-de-circuitos)
@@ -99,6 +100,35 @@ Impedancia $\Rarr$ 10M $\Omega$
 c.Indiqueu la funció que escollireu del MD i indiqueu la lectura que proporcionarà l’instrument per a cadascuna de les escales. Així mateix, busqueu al manual la incertesa a cada escala. Nota: La incertesa és el terme correcte però moltes vegadess’utilitzen encara els termesprecisió o exactitud.
 
 Utilitzariem la funció de mesura de voltatge en el rang de 4V, ja que en altres escales pot ser que no ho pogui detectar.
+
+![Fig 9](Imagenes/ELTEL/circuitopractica1fig9.png)
+
+#### Preg 5
+
+Per al circuit de la Figura 9:
+
+a. Obteniu l’expressió algebraica del corrent que circula per les resistències. Així mateix, calculeu el seu valor numèric si vi = 5 V i R1 = R2 = 1 kΩ.
+
+$$
+\\
+I_1=I_2=\frac{V_i}{R_1+R_2}=\frac{5}{10^3+10^3}=2,5·10^{-3}A
+\\
+$$
+b. Descriviu com connectar i configurar el MD per a mesurar el corrent en DC.
+
+Sabent que la corrent en un circuit en serie es constant es podria disposar en cualsevol part del ciruit en serie. Per exemple: entre les dues resistencies
+
+c. Procediu a simular el circuit anterior amb el programari Proteus. Per a la mesura de corrent utilitzeu l’instrument “DC Ammeter” de la paleta d’instruments. Anoteu el resultat i comproveu que coincideix amb el valor calculat a l’apartat P5.a.
+
+El resultat es de 2.5mA
+
+d. Dibuixeu el circuit equivalent si a l’entrada es connecta la FA i el MD es disposa per a la mesura del corrent. Utilitzeu els models de la Figura 3 per la FA i el de la Figura 6.b pel MD, on ara el valor de Re del MD dependrà de l’escala.
+![Circuit](Imagenes/ELTEL/Practica1Preg5.svg)
+e. Calculeu el valor de Re a les diferents escales de corrent. A tal fi, utilitzeu la dada de “caiguda de tensió” que proporciona el fabricant com a la tensió que hi cau entre els terminals del MD quan circula el corrent de fons d’escala.
+
+f. Obteniu novament l’expressió algebraica del corrent. Així mateix, calculeu el seu valor per les escales de 4 mA i 40 mA tenint en compte el valor calculat de Re a cada escala. Argumenteu en quin cas afecta més la impedància d’entrada del MD (efecte de càrrega).
+
+g. Busqueu al manual del MD la incertesa per a les escales de 4 mA i 40 mA.
 
 #### Preg 6
 
