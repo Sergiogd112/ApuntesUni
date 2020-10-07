@@ -14,7 +14,7 @@
     - [Limites, continuidad i asímptotes](#limites-continuidad-i-asímptotes)
     - [Funciones cóniques](#funciones-cóniques)
   - [Derivadas](#derivadas)
-    - [Condepto](#condepto)
+    - [Concepto](#concepto)
     - [Regla cadena](#regla-cadena)
     - [Derivación logarítmica](#derivación-logarítmica)
 
@@ -168,7 +168,7 @@
 
 ## Derivadas
 
-### Condepto
+### Concepto
 
 ### Regla cadena
 
