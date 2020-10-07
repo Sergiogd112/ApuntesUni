@@ -6,7 +6,7 @@
         {
             "label": "update",
             "type": "shell",
-            "command": "git stage .; git commit -m\"Update\";git push",
+            "command": "git stage .; git commit -m\"Update\";git push;git pull",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
