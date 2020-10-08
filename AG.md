@@ -94,5 +94,7 @@ Conjunto vectores V
 - Sea V e.v $\in \R$ $S={\overrightarrow{v}_1,\overrightarrow{v}_2,\overrightarrow{v}_3,\dots,\overrightarrow{v}_k}$
 - Se considera combinación linea el resultado de: $\overrightarrow{W}=\alpha_1\overrightarrow{v}_1\alpha_1\overrightarrow{v}_1\alpha_1\overrightarrow{v}_1+\alpha_2\overrightarrow{v}_2+\alpha_3\overrightarrow{v}_3+\dots+\alpha_k\overrightarrow{v}_k$
 - Trivial $\alpha_k=0\Rarr\overrightarrow{W}=\overrightarrow{0}$
+- si un conjunto de vectores tiene como comvinacion lineal el vector $\overrightarrow{0}$ se considera ligado
+- libre otherwise
 
 ## Aplicacions lineales
