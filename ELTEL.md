@@ -111,7 +111,11 @@ $V_i=V_0+R_1I$ en el si $R_1=R_2$ i $V_i=5V\Rarr V_i=R_1I+R_2I=2R_1I=2V_0\Rarr V
 
 b. Procediu a simular el circuit anterior amb el programari Proteus i R1 = R2 = 1 kΩ. Podeu obtenir la tensió vo de dues maneres: 1) amb la sonda de tensió de la paleta de sondes (probes) i 2) amb l’instrument “DC Volmeter” de la paleta d’instruments. Anoteu el valor de vo i comproveu que coincideix amb el calculat a l’apartat anterior.
 
+$V_0=2,5V;V_i=5V$
+
 c. Descriviu com connectar i configurar el MD per a la mesura de la tensió vo en DC.
+
+En aquest cas conectariem el multimetre en paral·lel a la resistencia $R_2$ i el configurariem en el rang de 4V
 
 d. Dibuixeu el circuit equivalent si a l’entrada es connecta una FA (per a generar vi) i a la sortida el MD configurat per a la mesura de tensions contínues. Utilitzeu els models de la Figura 3 per la FA i el de la Figura 6b pel MD.
 
