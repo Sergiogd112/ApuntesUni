@@ -1,7 +1,9 @@
 # Algebra i geomteria
+
 - [Algebra i geomteria](#algebra-i-geomteria)
   - [Números complejos](#números-complejos)
     - [Intro](#intro)
+      - [Conjuntos](#conjuntos)
     - [Plano complejo](#plano-complejo)
       - [Formas Numeros complejos](#formas-numeros-complejos)
       - [Operaciones](#operaciones)
@@ -10,12 +12,14 @@
   - [sistemas lineales](#sistemas-lineales)
   - [Espacios vectoriales](#espacios-vectoriales)
     - [SELH mxn](#selh-mxn)
+    - [Dependencia lineal](#dependencia-lineal)
   - [Aplicacions lineales](#aplicacions-lineales)
+
 ## Números complejos
 
 ### Intro
 
-**Conjuntos**
+#### Conjuntos
 
 - $\N$:Naturales
 - $\Z$:Enteros
@@ -45,10 +49,11 @@
 
 - **Forma Trigonometrica**:
   $z=r(\cos{\theta}+j\sin{\theta})$
-  
 
 $e^{j\theta} = \cos{\theta}+j\sin{\theta}$
+
 #### Operaciones
+
 - **Raiz**$\Rarr\sqrt[n]{Z}=z^{\frac{1}{n}}$
   - n soluciones
   - $\sqrt[n]{Z}=z^{\frac{1}{n}}=w\Rarr z=w^n\Rarr re^{j\theta}=x^ne^{jny}\\x=\sqrt[n]{r}\\ny=\theta + 2k\pi\\\sqrt[n]{z}=\sqrt[n]{r}e^{j\frac{\theta + 2k\pi}{n}} \forall k\in \N\ U\ \{0\} ;k<n$
@@ -76,8 +81,6 @@ $e^{j\theta} = \cos{\theta}+j\sin{\theta}$
 
 ## sistemas lineales
 
-  
-
 ## Espacios vectoriales
 
 ![VSP](Imagenes/AG/vectorspaceprop.png)
@@ -85,5 +88,11 @@ $e^{j\theta} = \cos{\theta}+j\sin{\theta}$
 ### SELH mxn
 
 Conjunto vectores V
+
+### Dependencia lineal
+
+- Sea V e.v $\in \R$ $S={\overrightarrow{v}_1,\overrightarrow{v}_2,\overrightarrow{v}_3,\dots,\overrightarrow{v}_k}$
+- Se considera combinación linea el resultado de: $\overrightarrow{W}=\alpha_1\overrightarrow{v}_1\alpha_1\overrightarrow{v}_1\alpha_1\overrightarrow{v}_1+\alpha_2\overrightarrow{v}_2+\alpha_3\overrightarrow{v}_3+\dots+\alpha_k\overrightarrow{v}_k$
+- Trivial $\alpha_k=0\Rarr\overrightarrow{W}=\overrightarrow{0}$
 
 ## Aplicacions lineales
