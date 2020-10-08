@@ -135,8 +135,7 @@ Un cuerpo no sometido a impulsos sigue una trayectoria rectilínea a velocidad c
     - $v_x(t)=\overset{.}{s}=-A\omega\sin(\omega t +\delta)$
     - $a_x(t)=\overset{..}{s}=-A\omega^2\cos(\omega t+\delta)$
     - $\omega^2=\frac{K}{m}$
+    - caso muelle suelo
   - Animal
 
 ### Tercera
-
-
