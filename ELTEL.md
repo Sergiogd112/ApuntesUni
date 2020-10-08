@@ -10,6 +10,7 @@
       - [Preg 1](#preg-1)
       - [Preg 2](#preg-2)
       - [Preg 3](#preg-3)
+      - [Preg 4](#preg-4)
       - [Preg 5](#preg-5)
       - [Preg 6](#preg-6)
   - [Teoria](#teoria)
@@ -99,6 +100,22 @@ Impedancia $\Rarr$ 10M $\Omega$
 c.Indiqueu la funció que escollireu del MD i indiqueu la lectura que proporcionarà l’instrument per a cadascuna de les escales. Així mateix, busqueu al manual la incertesa a cada escala. Nota: La incertesa és el terme correcte però moltes vegadess’utilitzen encara els termesprecisió o exactitud.
 
 Utilitzariem la funció de mesura de voltatge en el rang de 4V, ja que en altres escales pot ser que no ho pogui detectar.
+
+#### Preg 4
+
+Es vol implementar el divisor de tensió de la Figura 9, on vi és la tensió d’entrada, proporcionada per exemple per un FA, i vo la tensió de sortida a mesurar.
+
+a. Obteniu l’expressió algebraica de vo en funció de vi. Així mateix, calculeu el valor numèric de vo si vi = 5 V i R1=R2.
+
+b. Procediu a simular el circuit anterior amb el programari Proteus i R1 = R2 = 1 kΩ. Podeu obtenir la tensió vo de dues maneres: 1) amb la sonda de tensió de la paleta de sondes (probes) i 2) amb l’instrument “DC Volmeter” de la paleta d’instruments. Anoteu el valor de vo i comproveu que coincideix amb el calculat a l’apartat anterior.
+
+c. Descriviu com connectar i configurar el MD per a la mesura de la tensió vo en DC.
+
+d. Dibuixeu el circuit equivalent si a l’entrada es connecta una FA (per a generar vi) i a la sortida el MD configurat per a la mesura de tensions contínues. Utilitzeu els models de la Figura 3 per la FA i el de la Figura 6b pel MD.
+
+e. Obteniu novament l’expressió algebraica de vo. Així mateix, calculeu el valor de vo si la tensió de la FA és de 5 V i per als següents dos casos: 1) R1 = R2 = 1 kΩ, 2) R1 = R2 = 1 MΩ. Argumenteu en quin cas afecta més la impedància d’entrada del MD (efecte de càrrega) i si es pot reduir canviant l’escala del MD.
+
+f. Procediu a simular els dos casos de l’apartat anterior amb el programari Proteus. Utilitzeu l’instrument “DC Volmeter” de la paleta d’instruments per a la mesura de vo. Editeu l’instrument per tal de donar el valor adient a la resistència d’entrada (paràmetre “Load resistance”). Anoteu els valors de vo i comproveu que coincideixen amb els de l’apartat anterior.
 
 ![Fig 9](Imagenes/ELTEL/circuitopractica1fig9.png)
 
