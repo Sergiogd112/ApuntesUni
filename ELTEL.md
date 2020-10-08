@@ -107,6 +107,8 @@ Es vol implementar el divisor de tensió de la Figura 9, on vi és la tensió d�
 
 a. Obteniu l’expressió algebraica de vo en funció de vi. Així mateix, calculeu el valor numèric de vo si vi = 5 V i R1=R2.
 
+$V_i=V_0+R_1I$ en el si $R_1=R_2$ i $V_i=5V\Rarr V_i=R_1I+R_2I=2R_1I=2V_0\Rarr V_0=\frac{V_i}{2}=2,5V$
+
 b. Procediu a simular el circuit anterior amb el programari Proteus i R1 = R2 = 1 kΩ. Podeu obtenir la tensió vo de dues maneres: 1) amb la sonda de tensió de la paleta de sondes (probes) i 2) amb l’instrument “DC Volmeter” de la paleta d’instruments. Anoteu el valor de vo i comproveu que coincideix amb el calculat a l’apartat anterior.
 
 c. Descriviu com connectar i configurar el MD per a la mesura de la tensió vo en DC.
@@ -130,6 +132,7 @@ $$
 I_1=I_2=\frac{V_i}{R_1+R_2}=\frac{5}{10^3+10^3}=2,5·10^{-3}A
 \\
 $$
+
 b. Descriviu com connectar i configurar el MD per a mesurar el corrent en DC.
 
 Sabent que la corrent en un circuit en serie es constant es podria disposar en cualsevol part del ciruit en serie. Per exemple: entre les dues resistencies
@@ -142,9 +145,14 @@ d. Dibuixeu el circuit equivalent si a l’entrada es connecta la FA i el MD es 
 ![Circuit](Imagenes/ELTEL/Practica1Preg5.svg)
 e. Calculeu el valor de Re a les diferents escales de corrent. A tal fi, utilitzeu la dada de “caiguda de tensió” que proporciona el fabricant com a la tensió que hi cau entre els terminals del MD quan circula el corrent de fons d’escala.
 
-f. Obteniu novament l’expressió algebraica del corrent. Així mateix, calculeu el seu valor per les escales de 4 mA i 40 mA tenint en compte el valor calculat de Re a cada escala. Argumenteu en quin cas afecta més la impedància d’entrada del MD (efecte de càrrega).
+- En aquest cas, si volem mesurar una corrent de 2,5 mA utilitzarem l'opció de mA que te una caiguda de tensió de 800mV$\Rarr R_e=\frac{800}{2.5}m\Omega=320m\Omega$
+- En el cas de l'opció de A$\Rarr R=\frac{1}{0.0025}=400\Omega$
 
+f. Obteniu novament l’expressió algebraica del corrent. Així mateix, calculeu el seu valor per les escales de 4 mA i 40 mA tenint en compte el valor calculat de Re a cada escala. Argumenteu en quin cas afecta més la impedància d’entrada del MD (efecte de càrrega).
+$I=\frac{V}{R_e}$
+segons el manual hauria d'afectar el mateix en tot dos casos, per tant com les mesures en el rand de 4 mA son més sensibles, es veuran més afectades en proporció.
 g. Busqueu al manual del MD la incertesa per a les escales de 4 mA i 40 mA.
+$\plusmn(0.4\% +2D)$
 
 #### Preg 6
 
