@@ -1,4 +1,5 @@
 {
     "compile-hero.disable-compile-files-on-did-save-code": false,
-    "file.autosave":true
+    "file.autosave": true,
+    "triggerTaskOnSave.selectedTask": "update"
 }
