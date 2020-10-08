@@ -131,6 +131,10 @@ Un cuerpo no sometido a impulsos sigue una trayectoria rectilínea a velocidad c
   - Cuerdas
   - Elastica
     - $\overrightarrow{F}=-K(sx-l_0)\overrightarrow{l}$
+    - $x(t)=s(t)=A\cos(\omega t+\delta)$
+    - $v_x(t)=\overset{.}{s}=-A\omega\sin(\omega t +\delta)$
+    - $a_x(t)=\overset{..}{s}=-A\omega^2\cos(\omega t+\delta)$
+    - $\omega^2=\frac{K}{m}$
   - Animal
 
 ### Tercera
