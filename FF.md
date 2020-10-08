@@ -17,7 +17,13 @@
   - [Leyes de Newton](#leyes-de-newton)
     - [Primera](#primera)
     - [Segunda](#segunda)
-    - [Tercera](#tercera)
+  - [Tema 3 Trabajo y energia](#tema-3-trabajo-y-energia)
+    - [Trabajo 1D Fuerza constante Energia cinetica](#trabajo-1d-fuerza-constante-energia-cinetica)
+    - [Trabajo fuerza variable](#trabajo-fuerza-variable)
+    - [Trabajo y energia cinetica 3d: integral de camino](#trabajo-y-energia-cinetica-3d-integral-de-camino)
+    - [Fuerzas conservativas](#fuerzas-conservativas)
+    - [Energia Potencial y Energia Mecanica](#energia-potencial-y-energia-mecanica)
+    - [Problemas energia](#problemas-energia)
 
 ## Intro
 
@@ -89,7 +95,6 @@ $$
 
 ### Velocidad i acceleración instantanea
 
-
 $$
 \overrightarrow{r}=\int\overrightarrow{v}dt+\overrightarrow{R}=\int(\int\overrightarrow{a}dt)+\overrightarrow{C}dt+\overrightarrow{R}\\
 \overrightarrow{v}=\lim_{\Delta t\to0}\frac{\Delta\overrightarrow{r}}{\Delta t}=\frac{d\overrightarrow{r}}{dt}=\int \overrightarrow{a}dt+C\\
@@ -110,7 +115,6 @@ $$
   - $\overrightarrow{v}=R\frac{d\theta}{dt}(-\sin\theta(t),\cos\theta(t))=R\omega(-\sin\theta(t),\cos\theta(t))$
   - $\overrightarrow{a}=R\frac{d²\theta}{dt²}(-\sin\theta(t),\cos\theta(t))+R\omega(-\cos\theta(t),-\sin\theta(t))$
 
-
 ## Leyes de Newton
 
 ### Primera
@@ -130,8 +134,46 @@ Un cuerpo no sometido a impulsos sigue una trayectoria rectilínea a velocidad c
   - Fricción
   - Cuerdas
   - Elastica
+    - $\overrightarrow{F}=-K(sx-l_0)\overrightarrow{l}$
+    - $x(t)=s(t)=A\cos(\omega t+\delta)$
+    - $v_x(t)=\overset{.}{s}=-A\omega\sin(\omega t +\delta)$
+    - $a_x(t)=\overset{..}{s}=-A\omega^2\cos(\omega t+\delta)$
+    - $\omega^2=\frac{K}{m}$
+    - caso muelle suelo
+      - $y(t)=y_{eq}+Acos(\omega t+\delta)$
+      - $y_{eq}=l_0-\frac{mg}{k}$
+    - caso muelle techo
+      - $y(t)=y_{eq}+Acos(\omega t+\delta)$
+      - $y_{eq}=l_0+\frac{mg}{k}$
   - Animal
 
-### Tercera
+## Tema 3 Trabajo y energia
 
+### Trabajo 1D Fuerza constante Energia cinetica
 
+- $$
+  \\
+  x(t)=F_x\frac{F_x}{m}t^+v_ot+x_0
+  \\
+  $$
+
+- $$
+  \\
+  W\big|^{x_f}_{x_0}=\frac{1}{2}m(v^2-v_0^2)
+  \\
+  $$
+
+### Trabajo fuerza variable
+
+$$
+K=\\
+W=\int^{x_f}_{x_0}Fdx=\int^{x_f}_{x_0}F(t)dx=K_f-K_0
+$$
+
+### Trabajo y energia cinetica 3d: integral de camino
+
+### Fuerzas conservativas
+
+### Energia Potencial y Energia Mecanica
+
+### Problemas energia

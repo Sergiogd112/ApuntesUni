@@ -73,7 +73,6 @@ b.Descriviu breument el procediment per a la mesura de tensions, corrents i resi
 c. Descriviu com commutar entre la selecció d’escales manual o automàtica i com commutar entre la mesura en DC o AC
 
 - per passar a mode manual pulsem el buto "Manual Range button" i per tornar al automàtic el mantenim pulsat per 2s
--
 
 d.Anoteu les escales disponibles i la resolució associada per les mesures de tensió i corrent continus (DC) així com de resistència.
 
