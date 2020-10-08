@@ -130,6 +130,7 @@ Un cuerpo no sometido a impulsos sigue una trayectoria rectilínea a velocidad c
   - Fricción
   - Cuerdas
   - Elastica
+    - $\overrightarrow{F}=-K(sx-l_0)\overrightarrow{l}$
   - Animal
 
 ### Tercera
