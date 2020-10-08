@@ -1,5 +1,16 @@
 # Algebra i geomteria
-
+- [Algebra i geomteria](#algebra-i-geomteria)
+  - [Números complejos](#números-complejos)
+    - [Intro](#intro)
+    - [Plano complejo](#plano-complejo)
+      - [Formas Numeros complejos](#formas-numeros-complejos)
+      - [Operaciones](#operaciones)
+    - [Descomposición factoriales](#descomposición-factoriales)
+  - [Matrices](#matrices)
+  - [sistemas lineales](#sistemas-lineales)
+  - [Espacios vectoriales](#espacios-vectoriales)
+    - [SELH mxn](#selh-mxn)
+  - [Aplicacions lineales](#aplicacions-lineales)
 ## Números complejos
 
 ### Intro
@@ -69,6 +80,10 @@ $e^{j\theta} = \cos{\theta}+j\sin{\theta}$
 
 ## Espacios vectoriales
 
+![VSP](Imagenes/AG/vectorspaceprop.png)
 
+### SELH mxn
+
+Conjunto vectores V
 
 ## Aplicacions lineales
