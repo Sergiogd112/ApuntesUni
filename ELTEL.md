@@ -119,9 +119,16 @@ En aquest cas conectariem el multimetre en paral·lel a la resistencia $R_2$ i e
 
 d. Dibuixeu el circuit equivalent si a l’entrada es connecta una FA (per a generar vi) i a la sortida el MD configurat per a la mesura de tensions contínues. Utilitzeu els models de la Figura 3 per la FA i el de la Figura 6b pel MD.
 
+![Circuito 5](practicas/ELTEL/Q1/Practica1/Preg4.svg)
+
 e. Obteniu novament l’expressió algebraica de vo. Així mateix, calculeu el valor de vo si la tensió de la FA és de 5 V i per als següents dos casos: 1) R1 = R2 = 1 kΩ, 2) R1 = R2 = 1 MΩ. Argumenteu en quin cas afecta més la impedància d’entrada del MD (efecte de càrrega) i si es pot reduir canviant l’escala del MD.
 
+En tots dos casos serà de 2,5 V en el primer cas i de 2,38V en el segón. La impedancia afectaria més en el segon cas, ja que es molt propera a $R_1$ i no es pot variar.
+
 f. Procediu a simular els dos casos de l’apartat anterior amb el programari Proteus. Utilitzeu l’instrument “DC Volmeter” de la paleta d’instruments per a la mesura de vo. Editeu l’instrument per tal de donar el valor adient a la resistència d’entrada (paràmetre “Load resistance”). Anoteu els valors de vo i comproveu que coincideixen amb els de l’apartat anterior.
+
+- Cas $1k\Omega$:$2,5V$
+- Cas $1M\Omega$:$2,38V$
 
 ![Fig 9](Imagenes/ELTEL/circuitopractica1fig9.png)
 
