@@ -17,8 +17,13 @@
   - [Leyes de Newton](#leyes-de-newton)
     - [Primera](#primera)
     - [Segunda](#segunda)
-    - [Tercera](#tercera)
   - [Tema 3 Trabajo y energia](#tema-3-trabajo-y-energia)
+    - [Trabajo 1D Fuerza constante Energia cinetica](#trabajo-1d-fuerza-constante-energia-cinetica)
+    - [Trabajo fuerza variable](#trabajo-fuerza-variable)
+    - [Trabajo y energia cinetica 3d: integral de camino](#trabajo-y-energia-cinetica-3d-integral-de-camino)
+    - [Fuerzas conservativas](#fuerzas-conservativas)
+    - [Energia Potencial y Energia Mecanica](#energia-potencial-y-energia-mecanica)
+    - [Problemas energia](#problemas-energia)
 
 ## Intro
 
@@ -90,7 +95,6 @@ $$
 
 ### Velocidad i acceleración instantanea
 
-
 $$
 \overrightarrow{r}=\int\overrightarrow{v}dt+\overrightarrow{R}=\int(\int\overrightarrow{a}dt)+\overrightarrow{C}dt+\overrightarrow{R}\\
 \overrightarrow{v}=\lim_{\Delta t\to0}\frac{\Delta\overrightarrow{r}}{\Delta t}=\frac{d\overrightarrow{r}}{dt}=\int \overrightarrow{a}dt+C\\
@@ -110,7 +114,6 @@ $$
   - $\overrightarrow{r}(t)= R(\cos(\theta(t)),\sin\theta(t))$
   - $\overrightarrow{v}=R\frac{d\theta}{dt}(-\sin\theta(t),\cos\theta(t))=R\omega(-\sin\theta(t),\cos\theta(t))$
   - $\overrightarrow{a}=R\frac{d²\theta}{dt²}(-\sin\theta(t),\cos\theta(t))+R\omega(-\cos\theta(t),-\sin\theta(t))$
-
 
 ## Leyes de Newton
 
@@ -144,6 +147,25 @@ Un cuerpo no sometido a impulsos sigue una trayectoria rectilínea a velocidad c
       - $y_{eq}=l_0+\frac{mg}{k}$
   - Animal
 
-### Tercera
-
 ## Tema 3 Trabajo y energia
+
+### Trabajo 1D Fuerza constante Energia cinetica
+
+- $$
+  x(t)=F_x\frac{F_x}{m}t^+v_ot+x_0
+  $$
+
+- $$
+  W\big|^{x_f}_{x_0}=\frac{1}{2}m(v^2-v_0^2)
+  $$
+
+### Trabajo fuerza variable
+
+### Trabajo y energia cinetica 3d: integral de camino
+
+### Fuerzas conservativas
+
+### Energia Potencial y Energia Mecanica
+
+### Problemas energia
+$$
