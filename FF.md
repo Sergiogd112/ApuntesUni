@@ -136,6 +136,8 @@ Un cuerpo no sometido a impulsos sigue una trayectoria rectilínea a velocidad c
     - $a_x(t)=\overset{..}{s}=-A\omega^2\cos(\omega t+\delta)$
     - $\omega^2=\frac{K}{m}$
     - caso muelle suelo
+      - 
+    - caso muelle techo
   - Animal
 
 ### Tercera
