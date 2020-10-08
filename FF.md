@@ -152,14 +152,23 @@ Un cuerpo no sometido a impulsos sigue una trayectoria rectilínea a velocidad c
 ### Trabajo 1D Fuerza constante Energia cinetica
 
 - $$
+  \\
   x(t)=F_x\frac{F_x}{m}t^+v_ot+x_0
+  \\
   $$
 
 - $$
+  \\
   W\big|^{x_f}_{x_0}=\frac{1}{2}m(v^2-v_0^2)
+  \\
   $$
 
 ### Trabajo fuerza variable
+
+$$
+K=\\
+W=\int^{x_f}_{x_0}Fdx=\int^{x_f}_{x_0}F(t)dx=K_f-K_0
+$$
 
 ### Trabajo y energia cinetica 3d: integral de camino
 
@@ -168,4 +177,3 @@ Un cuerpo no sometido a impulsos sigue una trayectoria rectilínea a velocidad c
 ### Energia Potencial y Energia Mecanica
 
 ### Problemas energia
-$$
