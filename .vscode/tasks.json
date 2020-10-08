@@ -8,7 +8,7 @@
       "type": "shell",
       "command": "git stage .; git commit -m\"Update\";git push;git pull",
       "problemMatcher": [],
-      "reveal": "silent",
+      "showOutput": "silent",
       "group": {
         "kind": "build",
         "isDefault": true
