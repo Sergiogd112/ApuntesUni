@@ -18,6 +18,7 @@
     - [Primera](#primera)
     - [Segunda](#segunda)
     - [Tercera](#tercera)
+  - [Tema 3 Trabajo y energia](#tema-3-trabajo-y-energia)
 
 ## Intro
 
@@ -136,8 +137,13 @@ Un cuerpo no sometido a impulsos sigue una trayectoria rectilínea a velocidad c
     - $a_x(t)=\overset{..}{s}=-A\omega^2\cos(\omega t+\delta)$
     - $\omega^2=\frac{K}{m}$
     - caso muelle suelo
-      - 
+      - $y(t)=y_{eq}+Acos(\omega t+\delta)$
+      - $y_{eq}=l_0-\frac{mg}{k}$
     - caso muelle techo
+      - $y(t)=y_{eq}+Acos(\omega t+\delta)$
+      - $y_{eq}=l_0+\frac{mg}{k}$
   - Animal
 
 ### Tercera
+
+## Tema 3 Trabajo y energia
