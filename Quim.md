@@ -91,8 +91,10 @@ Nombres quantics
 
 ### Estructura molecular
 
-Repulsion de pares de electrones de la capa de valéncia
-a partir de lewis
-
+- Repulsion de pares de electrones de la capa de valéncia
+- a partir de lewis
+- Asumciones
+  - enlaces mediante par de electrones
+  - un enlace p
 
 ### Propietats dels compostos químics
