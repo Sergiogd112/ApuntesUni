@@ -13,6 +13,12 @@
       - [Preg 4](#preg-4)
       - [Preg 5](#preg-5)
       - [Preg 6](#preg-6)
+    - [Practica 2](#practica-2)
+      - [Preg1](#preg1)
+        - [A](#a)
+        - [B](#b)
+        - [C](#c)
+      - [Preg2](#preg2)
   - [Teoria](#teoria)
     - [Análisis de circuitos](#análisis-de-circuitos)
     - [Componentes](#componentes)
@@ -181,6 +187,45 @@ d.Busqueu al manual del MD la incertesa per a les escales de 4 kΩ i 4 MΩ.
 - $4k\Omega\Rarr± (0.75\% + 2D)$
 - $4M\Omega\Rarr± (1\% + 3D)$
 
+### Practica 2
+
+#### Preg1
+
+##### A
+
+$$
+  I=\frac{V_g}{R}\\
+  V=R·\frac{V_g}{R}=V_g
+$$
+
+##### B
+
+$$
+V(1)=1V\\
+I(1)=\frac{1}{150}=6,67mA\\
+V(2)=2V\\
+I(2)=13,3mA\\
+V(3)=3V\\
+I(3)=20mA\\
+V(4)=4V\\
+I(4)=26,67mA\\
+V(5)=5V\\
+I(5)=33,33mA
+$$
+
+##### C
+
+$$
+P=VI\\
+P(1)=6,67mW\\
+P(2)=26,67mW\\
+P(3)=60mW\\
+P(4)=106,7mW\\
+P(5)=166,7mW
+$$
+
+#### Preg2
+
 ## Teoria
 
 ### Análisis de circuitos
@@ -218,3 +263,6 @@ d.Busqueu al manual del MD la incertesa per a les escales de 4 kΩ i 4 MΩ.
 #### Fuente ideal de tensión
 
 #### Fuente ideal de corriente
+
+$$
+$$
