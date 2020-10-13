@@ -180,5 +180,3 @@ $h'=f^g(g'\ln f+g\frac{f'}{f})$
 ### Regla Hopital
 
 $\underset{x\to a}{\lim}\frac{f(x)}{g(x)}\rarr\underset{x\to a}{\lim}\frac{f'(x)}{g'(x)}$
-
-
