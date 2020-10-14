@@ -184,7 +184,9 @@ $$
 
 ### Fuerzas conservativas
 
-$\forall C\intop \overrightarrow{F}·d\overrightarrow{r}=0$
+$$
+\forall C\intop \overrightarrow{F}·d\overrightarrow{r}=0
+$$
 
 ### Energia Potencial y Energia Mecanica
 
