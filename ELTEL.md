@@ -15,11 +15,14 @@
       - [Preg 6](#preg-6)
     - [Practica 2](#practica-2)
       - [Preg1](#preg1)
-        - [A](#a)
-        - [B](#b)
-        - [C](#c)
-        - [D](#d)
+        - [1A](#1a)
+        - [1B](#1b)
+        - [1C](#1c)
+        - [1D](#1d)
       - [Preg2](#preg2)
+        - [2A](#2a)
+        - [2B](#2b)
+        - [2C](#2c)
   - [Teoria](#teoria)
     - [Análisis de circuitos](#análisis-de-circuitos)
     - [Componentes](#componentes)
@@ -192,14 +195,14 @@ d.Busqueu al manual del MD la incertesa per a les escales de 4 kΩ i 4 MΩ.
 
 #### Preg1
 
-##### A
+##### 1A
 
 $$
   I=\frac{V_g}{R}\\
   V=R·\frac{V_g}{R}=V_g
 $$
 
-##### B
+##### 1B
 
 $$
 V(1)=1V\\
@@ -214,7 +217,7 @@ V(5)=5V\\
 I(5)=33,33mA
 $$
 
-##### C
+##### 1C
 
 $$
 P=VI\\
@@ -225,7 +228,7 @@ P(4)=106,7mW\\
 P(5)=166,7mW
 $$
 
-##### D
+##### 1D
 
 $$
 V(1)=1V\\
@@ -246,6 +249,25 @@ P(5)=166,7mW
 $$
 
 #### Preg2
+
+##### 2A
+
+$$
+V=V_g
+I=\frac{V_g}{R_1+R_2+R_3}
+V_1=\frac{V_g}{R_1+R_2+R_3}R_1
+V_2=\frac{V_g}{R_1+R_2+R_3}R_2
+V_3=\frac{V_g}{R_1+R_2+R_3}R_3
+$$
+
+##### 2B
+
+$$
+R_eq=R_1+R_2+R_3
+$$
+
+##### 2C
+
 
 ## Teoria
 
