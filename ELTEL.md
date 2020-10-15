@@ -24,6 +24,14 @@
         - [2B](#2b)
         - [2C](#2c)
         - [2D](#2d)
+        - [2E](#2e)
+        - [2F](#2f)
+        - [2G](#2g)
+      - [Preg 3](#preg-3-1)
+        - [3A](#3a)
+        - [3B](#3b)
+        - [3C](#3c)
+        - [3D](#3d)
   - [Teoria](#teoria)
     - [Análisis de circuitos](#análisis-de-circuitos)
     - [Componentes](#componentes)
@@ -280,12 +288,77 @@ $$
 ##### 2D
 
 $$
+P_1=V_1I=9,95mW\\
+P_2=V_2I=3,67mW\\
+P_3=V_3I=11,53mW\\
+$$
+
+##### 2E
+
+I es 0 y per tant les resistencies no tenen cap diferencia de potencial entre els seus extrems, excepte en $V_2$ que es 5V i $P=0$
+
+##### 2F
+
+$$
+V=5V\\
+I=5,8mA\\
+V_1=2,27V\\
+P_1=13,15mW
+V_2=0V\\
+V_3=2,73V\\
+P_3=15,84mW
+$$
+
+##### 2G
+$$
 V=5V\\
 I=4,95mA\\
 V_1=1,93V\\
 V_2=0,743V\\
 V_3=2,33V\\
 $$
+
+#### Preg 3
+
+##### 3A
+
+$$
+V=V_g\\
+$$
+
+$$
+I=\frac{V_g}{\frac{1}{\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}}}\\
+$$
+
+$$
+I_1=V/R_1\\
+$$
+
+$$
+I_2=V/R_2\\
+$$
+
+$$
+I_3=V/R_3\\
+$$
+
+##### 3B
+
+$$
+R_eq=\frac{1}{\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}}
+$$
+
+##### 3C
+
+$$
+V=5V\\
+I=56,79mA\\
+I_1=12,82mA\\
+I_2=33,33mA\\
+I_3=10,64mA\\
+$$
+
+##### 3D
 
 ## Teoria
 
