@@ -23,6 +23,7 @@
         - [2A](#2a)
         - [2B](#2b)
         - [2C](#2c)
+        - [2D](#2d)
   - [Teoria](#teoria)
     - [Análisis de circuitos](#análisis-de-circuitos)
     - [Componentes](#componentes)
@@ -253,11 +254,11 @@ $$
 ##### 2A
 
 $$
-V=V_g
-I=\frac{V_g}{R_1+R_2+R_3}
-V_1=\frac{V_g}{R_1+R_2+R_3}R_1
-V_2=\frac{V_g}{R_1+R_2+R_3}R_2
-V_3=\frac{V_g}{R_1+R_2+R_3}R_3
+V=V_g\\
+I=\frac{V_g}{R_1+R_2+R_3}\\
+V_1=\frac{V_g}{R_1+R_2+R_3}R_1\\
+V_2=\frac{V_g}{R_1+R_2+R_3}R_2\\
+V_3=\frac{V_g}{R_1+R_2+R_3}R_3\\
 $$
 
 ##### 2B
@@ -267,6 +268,16 @@ R_eq=R_1+R_2+R_3
 $$
 
 ##### 2C
+
+$$
+V=5V\\
+I=4,95mA\\
+V_1=1,93V\\
+V_2=0,743V\\
+V_3=2,33V\\
+$$
+
+##### 2D
 
 
 ## Teoria
