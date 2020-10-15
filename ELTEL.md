@@ -32,6 +32,7 @@
         - [3B](#3b)
         - [3C](#3c)
         - [3D](#3d)
+        - [3E](#3e)
   - [Teoria](#teoria)
     - [Análisis de circuitos](#análisis-de-circuitos)
     - [Componentes](#componentes)
@@ -310,12 +311,16 @@ P_3=15,84mW
 $$
 
 ##### 2G
+
 $$
 V=5V\\
 I=4,95mA\\
 V_1=1,93V\\
 V_2=0,743V\\
 V_3=2,33V\\
+P_1=V_1I=9,95mW\\
+P_2=V_2I=3,67mW\\
+P_3=V_3I=11,53mW\\
 $$
 
 #### Preg 3
@@ -359,6 +364,16 @@ I_3=10,64mA\\
 $$
 
 ##### 3D
+
+$$
+P_1=64,1mW\\
+P_2=166,6mW\\
+P_3=53,2mW
+$$
+
+##### 3E
+
+Coincideixen
 
 ## Teoria
 
