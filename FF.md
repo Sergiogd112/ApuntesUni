@@ -171,13 +171,16 @@ W=\int^{x_f}_{x_0}Fdx=\int^{x_f}_{x_0}F(t)dx=K_f-K_0
 $$
 
 ### Trabajo y energia cinetica 3d: integral de camino
+
 $$
 \overrightarrow{F}=m\frac{d\overrightarrow{v}}{dt}\\
 \overline{F}\approx m\frac{\Delta\overrightarrow{v}}{\Delta t}\\
 \overline{F}·\Delta\overrightarrow{r}\approx m\frac{\Delta\overrightarrow{v}·\overrightarrow{r}}{\Delta t}\\
 \overline{F}·\Delta\overrightarrow{r}\approx m\Delta\overrightarrow{v}·\overrightarrow{v}=m\frac{1}{2}(\Delta(v_x^2+v_y^2+v_z^2))\\
 $$
+
 Para fuerzas dependientes posición
+
 $$
 W=\int_{\overline{r}_0}^{\overline{r}_f}\overrightarrow{F}·d\overrightarrow{r}%=\underset{N\rarr\infty;\ \Delta\overrightarrow{r}}{\lim}
 $$
