@@ -18,6 +18,7 @@
         - [A](#a)
         - [B](#b)
         - [C](#c)
+        - [D](#d)
       - [Preg2](#preg2)
   - [Teoria](#teoria)
     - [Análisis de circuitos](#análisis-de-circuitos)
@@ -223,6 +224,10 @@ P(3)=60mW\\
 P(4)=106,7mW\\
 P(5)=166,7mW
 $$
+
+##### D
+
+
 
 #### Preg2
 
