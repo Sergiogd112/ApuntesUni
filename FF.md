@@ -65,7 +65,7 @@
 - $\hat{i}\times\hat{k}=-\hat{j}$
 - $\hat{k}\times\hat{i}=\hat{k}$
 
-> **$\hat{i},\hat{j},\hat{k}\Rarr+$**<br>**$\hat{j},\hat{i},\hat{k}\Rarr-$**
+> **$\hat{i},\hat{j},\hat{k}\Rarr+$\\$\hat{j},\hat{i},\hat{k}\Rarr-$**
 
 ## Cinemática
 
@@ -157,7 +157,7 @@ Un cuerpo no sometido a impulsos sigue una trayectoria rectilínea a velocidad c
   \\
   $$
 
-- $$
+- $$  
   \\
   W\big|^{x_f}_{x_0}=\frac{1}{2}m(v^2-v_0^2)
   \\
