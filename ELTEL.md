@@ -228,9 +228,9 @@ I(5)=33,33mA
 $$
 
 ##### 1C
-
+No es porporcional, pq depen quadràticament de V
 $$
-P=VI\\
+P=VI=\frac{V^2}{R}\\
 P(1)=6,67mW\\
 P(2)=26,67mW\\
 P(3)=60mW\\
