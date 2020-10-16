@@ -12,6 +12,9 @@
     - [Enllaç químic](#enllaç-químic)
     - [Estructura molecular](#estructura-molecular)
     - [Propietats dels compostos químics](#propietats-dels-compostos-químics)
+  - [Estat sòlid](#estat-sòlid)
+    - [Nocions cristalografia](#nocions-cristalografia)
+      - [Sistemes Cristalins](#sistemes-cristalins)
 
 ## Principis Generals de la Quimica
 
@@ -98,3 +101,27 @@ Nombres quantics
   - un enlace p
 
 ### Propietats dels compostos químics
+
+## Estat sòlid
+
+### Nocions cristalografia
+
+- Amorfs: No tenen ordre a nivell microscopic
+- Monocirstal·lí: una sola estructura en les tres direccións del espai
+- Cristalls: Estructura de partícules que es repeteixen de manera ordenada en les tres direccions de l’espai.
+- Policristalins diferents regions cristal·lines
+- Semicristalins: alternar regions cristal·lines amb regions amorfes
+
+![TablaCrist](Imagenes/QUIM/Tabla1Crist.png)
+
+#### Sistemes Cristalins
+
+- Sistema de coordenades:
+  - eixos x,y,z que coincideix en amb les arestes del prisma
+  - Origenen un vèrtex(0,0,0)
+- Geometria(sense tenir en compte els àtoms)
+- dimensions definides per 6 paràmetres de xarxa:
+  - Longitud de les tres arestes(a,b,c)
+  - Angles interaxials:α(\< bc),b(\< ac)iγ(\< ab).
+
+![Tabla2Crist](Imagenes/QUIM/Tabla2Crist.png)
