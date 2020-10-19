@@ -24,6 +24,14 @@
     - [Fuerzas conservativas](#fuerzas-conservativas)
     - [Energia Potencial y Energia Mecanica](#energia-potencial-y-energia-mecanica)
     - [Problemas energia](#problemas-energia)
+  - [Tema 4 Rotación en un eje](#tema-4-rotación-en-un-eje)
+    - [Intro](#intro-1)
+    - [Def solido rijido y su centro de masas](#def-solido-rijido-y-su-centro-de-masas)
+    - [Momento angular y de fuerzas](#momento-angular-y-de-fuerzas)
+    - [Ecuaciones momento](#ecuaciones-momento)
+    - [Giro en torno a eje fijo](#giro-en-torno-a-eje-fijo)
+    - [Rueda](#rueda)
+    - [Conservación momento](#conservación-momento)
 
 ## Intro
 
@@ -194,3 +202,19 @@ $$
 ### Energia Potencial y Energia Mecanica
 
 ### Problemas energia
+
+## Tema 4 Rotación en un eje
+
+### Intro
+
+### Def solido rijido y su centro de masas
+
+### Momento angular y de fuerzas
+
+### Ecuaciones momento
+
+### Giro en torno a eje fijo
+
+### Rueda
+
+### Conservación momento

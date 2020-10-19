@@ -18,6 +18,7 @@
     - [Regla cadena](#regla-cadena)
     - [Derivación logarítmica](#derivación-logarítmica)
     - [Regla Hopital](#regla-hopital)
+    - [Regla de compresión](#regla-de-compresión)
 
 ## Documentos
 
@@ -180,3 +181,7 @@ $h'=f^g(g'\ln f+g\frac{f'}{f})$
 ### Regla Hopital
 
 $\underset{x\to a}{\lim}\frac{f(x)}{g(x)}\rarr\underset{x\to a}{\lim}\frac{f'(x)}{g'(x)}$
+
+### Regla de compresión
+
+Encajonar una funcion entre otras dos que tienden a un mismo punto
