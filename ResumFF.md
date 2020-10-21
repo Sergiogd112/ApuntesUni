@@ -10,11 +10,7 @@ donde $û_r$ es el vector director al centro del planeta
 
 ## Normal
 
-Fuerza que hace un objeto solido para impedir un movimiento
-
-$$
-N=
-$$
+Fuerza que hace un objeto solido para impedir que otro lo atraviese
 
 ## Fuerzas
 
