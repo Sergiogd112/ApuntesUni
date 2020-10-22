@@ -33,6 +33,28 @@
         - [3C](#3c)
         - [3D](#3d)
         - [3E](#3e)
+    - [Practica 3](#practica-3)
+      - [Preg 3.1](#preg-31)
+        - [3.1.A](#31a)
+        - [3.1.B](#31b)
+      - [Preg 3.2](#preg-32)
+        - [3.2.A](#32a)
+        - [3.2.B](#32b)
+        - [3.2.C](#32c)
+      - [Preg 3.3](#preg-33)
+        - [3.3.A](#33a)
+        - [3.3.B](#33b)
+        - [3.3.C](#33c)
+      - [Preg 3.4](#preg-34)
+        - [3.4.A](#34a)
+        - [3.4.B](#34b)
+        - [3.4.C](#34c)
+        - [3.4.D](#34d)
+        - [3.4.E](#34e)
+        - [3.4.F](#34f)
+        - [3.4.G](#34g)
+      - [Preg 3.5](#preg-35)
+        - [A](#a)
   - [Teoria](#teoria)
     - [Análisis de circuitos](#análisis-de-circuitos)
     - [Componentes](#componentes)
@@ -228,7 +250,9 @@ I(5)=33,33mA
 $$
 
 ##### 1C
+
 No es porporcional, pq depen quadràticament de V
+
 $$
 P=VI=\frac{V^2}{R}\\
 P(1)=6,67mW\\
@@ -374,6 +398,116 @@ $$
 ##### 3E
 
 Coincideixen
+
+### Practica 3
+
+#### Preg 3.1
+
+##### 3.1.A
+
+- Formes:
+  - Sinusoidal
+  - Triangular
+  - Cuadrada
+- Amplitud
+  - Obertr $\Rarr$ 20Vpp
+  - $50\Omega$ 10Vpp
+- Frequencies:
+  - 0,1-13MHz vuit decades
+- Offset M`xim:
+  - 0-10V
+- Impedància:
+  - $50\Omega$
+
+##### 3.1.B
+
+Pulsant el botò central de l'atenuador
+
+#### Preg 3.2
+
+##### 3.2.A
+
+##### 3.2.B
+
+$$
+V_{max}=\frac{V_{pp}}{2}+V_{off}
+T=\frac{1}{\nu}
+$$
+
+##### 3.2.C
+
+Seleccionar la formular sinusoidal, ajustem la freqüencia i l'offset amb el respectiu control
+
+#### Preg 3.3
+
+##### 3.3.A
+
+- Continus:
+  - auto
+- No-periodics
+  - Normal
+- Periodics
+  - Normal
+
+##### 3.3.B
+
+- Frequencia 50Hz$\geq$
+- Cicle de treball 0.5%$\geq$
+- Amplitud de 10mV$\geq$
+
+##### 3.3.C
+
+- Secció Vertical
+  - Nº: 4(analogic) 16(digital)
+  - Rang: 1mV-5V(analog) $\plusmn8V-10mv$(digital)
+  - Modes d'acoblement
+    - ac
+    - dc
+    - terra
+  - Impedància:
+    - Analogic: 1M$\Omega$
+    - Digital: 100k$\Omega$
+- Secció Horitzontal
+  - Rang:5ns-50s
+- Mesures autmàtiques
+  - tensiò:
+    - digital:
+      - 1.4
+      - 2.5
+      - -1.3
+  - temps:60ns-10s
+
+#### Preg 3.4
+
+##### 3.4.A
+
+conectem la sonda al OSC i l'altre extrem al generador, posteriorment utilitzem l'autoscale i ajustem el trigger
+
+##### 3.4.B
+
+##### 3.4.C
+
+$$
+V_s=(R_s+R_e)I\\
+V_o=R_e·\frac{V_s}{R_s+R_e}
+$$
+
+##### 3.4.D
+
+##### 3.4.E
+
+##### 3.4.F
+
+- DC
+  - permet senyals dc i ac com a trigger
+- AC
+  - util quan el dc té un offset nolt gran
+
+##### 3.4.G
+
+#### Preg 3.5
+
+##### A
 
 ## Teoria
 
