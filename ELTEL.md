@@ -54,7 +54,14 @@
         - [3.4.F](#34f)
         - [3.4.G](#34g)
       - [Preg 3.5](#preg-35)
-        - [A](#a)
+        - [3.5.A](#35a)
+        - [3.5.B](#35b)
+        - [3.5.C](#35c)
+        - [3.5.D](#35d)
+        - [3.5.E](#35e)
+      - [3TC1](#3tc1)
+        - [1.TC.A](#1tca)
+        - [1.TC.B](#1tcb)
   - [Teoria](#teoria)
     - [Análisis de circuitos](#análisis-de-circuitos)
     - [Componentes](#componentes)
@@ -505,9 +512,39 @@ $$
 
 ##### 3.4.G
 
+Si coincideix
+
 #### Preg 3.5
 
-##### A
+##### 3.5.A
+
+Fet
+
+##### 3.5.B
+
+connectem els cables al generador i un dels extrems al pol positiu del MD i l'altre a terra. Posteriorment seleccionem el rang de 40V en AC
+
+##### 3.5.C
+
+##### 3.5.D
+
+$$
+V=V_s
+$$
+
+##### 3.5.E
+
+Els valors de lectura oscilarien entorn al V
+
+#### 3TC1
+
+##### 1.TC.A
+
+##### 1.TC.B
+
+$$
+V_o=V_s
+$$
 
 ## Teoria
 
