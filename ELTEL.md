@@ -372,7 +372,7 @@ $$
 
 $$
 I_2=V/R_2\\
-$$
+$$B
 
 $$
 I_3=V/R_3\\
@@ -543,8 +543,9 @@ Els valors de lectura oscilarien entorn al V
 ##### 1.TC.B
 
 $$
-V_o=V_s
+V_o=\frac{V_s·R_2}{R_1+R_2}\\
 $$
+
 
 ## Teoria
 
