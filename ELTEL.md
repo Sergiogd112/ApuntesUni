@@ -62,6 +62,9 @@
       - [3TC1](#3tc1)
         - [1.TC.A](#1tca)
         - [1.TC.B](#1tcb)
+    - [Practica 4](#practica-4)
+      - [4.1](#41)
+        - [4.1.A](#41a)
   - [Teoria](#teoria)
     - [Análisis de circuitos](#análisis-de-circuitos)
     - [Componentes](#componentes)
@@ -549,6 +552,15 @@ $$
 V_o=\frac{V_s·R_2}{R_1+R_2}\\
 $$
 
+### Practica 4
+
+#### 4.1
+
+##### 4.1.A
+
+$$
+
+$$
 
 ## Teoria
 
