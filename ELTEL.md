@@ -63,8 +63,7 @@
         - [1.TC.A](#1tca)
         - [1.TC.B](#1tcb)
     - [Practica 4](#practica-4)
-      - [4.1](#41)
-        - [4.1.A](#41a)
+      - [TC1](#tc1)
   - [Teoria](#teoria)
     - [Análisis de circuitos](#análisis-de-circuitos)
     - [Componentes](#componentes)
@@ -554,13 +553,7 @@ $$
 
 ### Practica 4
 
-#### 4.1
-
-##### 4.1.A
-
-$$
-
-$$
+#### TC1
 
 ## Teoria
 
