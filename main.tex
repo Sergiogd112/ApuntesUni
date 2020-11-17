@@ -2,29 +2,29 @@
 \usepackage[utf8]{inputenc}
 \usepackage{ibcat5ia}
 \usepackage{opencolor}
-%\usepackage[utf8]{inputenc}
 \usepackage[toc,page]{appendix}
 \usepackage{listings}
 %\usepackage{pdfpages}
 %\usepackage{subfig}
-\usepackage{minted}
+%\usepackage{minted}
 %\usepackage{subcaption} 
 %\usepackage{soul}
-%\usepackage{float}
+\usepackage{float}
 %\usepackage{graphicx}
 \usepackage{pgfplots}
 \usepackage[english]{babel}
 \usepackage{svg}
+\usepackage{amsmath}
+\usepackage{mathtools}
+
 \title{Resumen Q1}
 \author{Sergio Gómez Damas}
-\date{Noviembre 2020}
 
 \begin{document}
 
 \maketitle
 \newpage
-\tableofcontents
-\newpage
+
 \section{Álgebra y Geometría}
 \newpage
 \section{Cálculo}
@@ -55,14 +55,46 @@ Donde $m_i$ es la masa del isotopo i y $a_i$ su abundancia relativa
 \begin{equation}
     N_a=6.022\cdot10^{23}
 \end{equation}
-\subsection{Estados materia}
+\subsubsection{Estados materia}
 \begin{figure}[H]
     \centering
-    \includegraphics{290px-Estados.svg.png}
+    \includegraphics{Imagenes/QUIM/290px-Estados.png}
     \caption{Estados materia}
     \label{fig:estadosmateria}
 \end{figure}
-
+\emph{Liquido$\Rightarrow$Gas}:$T<T_{{ebullición}}\Rightarrow$evaporación
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Imagenes/QUIM/Phase-diag_es.png}
+    \caption{Diagrama fase}
+\end{figure}
+\subsubsection{Disoluciones}
+\begin{itemize}
+    \item \emph{Soluto}: componente minoritario
+    \item \emph{Disolvente}: componente mayoritario
+\end{itemize}
+\paragraph{Unidades concentración}
+\begin{gather}     
+    \%masa=\frac{g\ soluto}{g\ disolución}\cdot100\\\\
+    \%vol=\frac{mL\ soluto}{mL\ solución}\cdot100\\\\
+    \%=\frac{g\ soluto}{100mL\ solución}\\\\
+    M=\frac{moles\ soluto}{L\ disolución}\\\\
+    m=\frac{moles\ soluto}{Kg\ disolución}\\\\
+    fracción\ molar X=\frac{moles\ soluto}{moles\ soluto+moles\ dissolvente}\\\\
+    g/L=\frac{g\ soluto}{L\ disolución}\\\\
+    ppm=\frac{mg\ soluto}{L\ disolución}\\\\
+    ppm=\frac{mg\ soluto}{Kg\ disolución}\\\\
+    ppm=\frac{particulas\ substancia}{10^6\ particulas\ totales}
+\end{gather}
+\subsubsection{Gases ideales}
+\paragraph{Equación de los gases ideales}
+\begin{equation}
+    PV=NRT
+\end{equation}
+\paragraph{pressiones parciales}
+\begin{equation}
+    P_\text{Total}
+\end{equation}
 \subsection{Tema 2}
 \end{document}
 
