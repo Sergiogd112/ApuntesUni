@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "B/hWbHrR2wHss5I31CWzs8CI6/ZS+g1mJK6GBs1caK5flc4f17UDcj+iaUlfvF4DlqtmFxdKtXHPWvQVKcyNyA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sergi\\Documents\\GitHub\\ApuntesUni\\Q2A\\I2\\TEMA1\\Your first project in C#-20220220\\1.- PrimerProyectoBefore\\PrimerProyectoSergio\\FlightLib\\FlightLib.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sergi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
