@@ -35,8 +35,12 @@ namespace FlightLib
         // Metodos
         public void SetVelocidad(double velocidad)
         // setter del atributo velocidad
-        { this.velocidad = velocidad;  }
-
+        { this.velocidad = velocidad; }
+        public double getDistanciaDestino()
+        {
+            return Math.Sqrt((this.finalPosition.GetX() - this.currentPosition.GetX()) * (this.finalPosition.GetX() - this.currentPosition.GetX()) +
+                                            (this.finalPosition.GetY() - this.currentPosition.GetY()) * (this.finalPosition.GetY() - currentPosition.GetY()));
+        }
         public void Mover(double tiempo)
         // Mueve el vuelo a la posición correspondiente a viajar durante el tiempo que se recibe como parámetro
         {
@@ -66,9 +70,329 @@ namespace FlightLib
         {
             return this.currentPosition == this.finalPosition;
         }
-        public bool Conflicto(FlightPlan b,double distanciaSeguridad)
+
+        /// <summary>
+        /// Determina la distancia mas corta entre trayectorias. Convertido de Python a C//.
+        /// Codigo original en: https://stackoverflow.com/questions/2824478/shortest-distance-between-two-line-segments
+        /// </summary>
+        /// <param name="b"></param>
+        /// <param name="clampAll"></param>
+        /// <param name="clampA0"></param>
+        /// <param name="clampA1"></param>
+        /// <param name="clampB0"></param>
+        /// <param name="clampB1"></param>
+        /// <returns></returns>
+        public double[,] ShortestDistanceBetweenPaths(FlightPlan b, bool clampAll = false,
+                                                        bool clampA0 = false, bool clampA1 = false,
+                                                        bool clampB0 = false, bool clampB1 = false,
+                                                        double magA = -1, double magB = -1)
         {
-            return this.currentPosition.Distancia(b.currentPosition) >= distanciaSeguridad;
+
+            // If clampAll=True, set all clamps to True
+            if (clampAll)
+            {
+                clampA0 = true;
+                clampA1 = true;
+                clampB0 = true;
+                clampB1 = true;
+            }
+            double[] a0 = new double[2];
+            a0[0] = this.currentPosition.GetX();
+            a0[1] = this.currentPosition.GetY();
+            double[] a1 = new double[2];
+            a1[0] = this.finalPosition.GetX();
+            a1[1] = this.finalPosition.GetY();
+            double[] b0 = new double[2];
+            b0[0] = b.currentPosition.GetX();
+            b0[1] = b.currentPosition.GetY();
+            double[] b1 = new double[2];
+            b1[0] = b.finalPosition.GetX();
+            b1[1] = b.finalPosition.GetY();
+            // Calculate denomitator
+            double[] A = new double[2];
+            A[0] = a1[0] - a0[0];
+            A[1] = a1[1] - a0[1];
+            double[] B = new double[2];
+            B[0] = b1[0] - b0[0];
+            B[1] = b1[1] - b0[1];
+            // get the magnitudes
+            if (magA == -1)
+            {
+                magA = this.getDistanciaDestino();
+            }
+            if (magB == -1)
+            {
+                magB = this.getDistanciaDestino();
+
+            }
+
+            double[] _A = new double[2];
+            _A[0] = A[0] / magA;
+            _A[1] = A[1] / magA;
+            double[] _B = new double[2];
+            _B[0] = B[0] / magB;
+            _B[1] = B[1] / magB;
+
+            double cross = _A[0] * _B[1] - _A[1] * _B[0];
+            double denom = cross;
+
+            double[,] result = new double[3, 2];
+
+            // If lines are parallel (denom=0) test if lines overlap.
+            // If they don't overlap then there is a closest point solution.
+            // If they do overlap, there are infinite closest positions, but there is a closest distance
+            double d0, d1, tempx, tempy;
+            if (denom == 0)
+            {
+                d0 = _A[0] * (b0[0] - a0[0]) + _A[1] * (b0[1] - a0[1]);
+
+                // Overlap only possible with clamping
+                if (clampA0 || clampA1 || clampB0 || clampB1)
+                {
+                    d1 = _A[0] * (b1[0] - a0[0]) + _A[1] * (b1[1] - a0[1]);
+
+                    // Is segment B before A?
+                    if (d0 <= 0 && 0 >= d1)
+                    {
+                        if (clampA0 & clampB1)
+                        {
+                            if (Math.Abs(d0) < Math.Abs(d1))
+                            {
+                                result[0, 0] = a0[0];
+                                result[0, 1] = a0[1];
+                                result[1, 0] = b0[0];
+                                result[1, 1] = b0[1];
+                                result[2, 0] = Math.Sqrt((a0[0] - b0[0]) * (a0[0] - b0[0]) + (a0[1] - b0[1]) * (a0[1] - b0[1]));
+                                return result;
+                            }
+                            result[0, 0] = a0[0];
+                            result[0, 1] = a0[1];
+                            result[1, 0] = b1[0];
+                            result[1, 1] = b1[1];
+                            result[2, 0] = Math.Sqrt((a0[0] - b1[0]) * (a0[1] - b1[1]) * (a0[1] - b1[1]));
+                            return result;
+                        }
+                    }
+                    // Is segment B after A?
+                    else if (d0 >= magA & magA <= d1)
+                    {
+                        if (clampA1 & clampB0)
+                        {
+                            if (Math.Abs(d0) < Math.Abs(d1))
+                            {
+                                result[0, 0] = a1[0];
+                                result[0, 1] = a1[1];
+                                result[1, 0] = b0[0];
+                                result[1, 1] = b0[1];
+                                result[2, 0] = Math.Sqrt((a1[0] - b0[0]) * (a1[0] - b0[0]) + (a1[1] - b0[1]) * (a1[1] - b0[1]));
+                                return result;
+                            }
+                            result[0, 0] = a1[0];
+                            result[0, 1] = a1[1];
+                            result[1, 0] = b1[0];
+                            result[1, 1] = b1[1];
+                            result[2, 0] = Math.Sqrt((a1[0] - b1[0]) * (a1[0] - b1[0]) + (a1[1] - b1[1]) * (a1[1] - b1[1]));
+                            return result;
+                        }
+                    }
+                }
+                //result[0, 0] = 0;
+                //result[0, 1] = 0;
+                //result[1, 0] = 0;
+                //result[1,1]=0;
+                tempx = d0 * _A[0] + a0[0] - b0[0];
+                tempy = d0 * _A[1] + a0[1] - b0[1];
+                result[2, 0] = Math.Sqrt(tempx * tempx + tempy * tempy);
+
+                // Segments overlap, return distance between parallel segments
+                return result;
+            }
+
+
+            // Lines criss-cross: Calculate the projected closest points
+            double[] t = new double[2];
+            t[0] = (b0[0] - a0[0]);
+            t[1] = (b0[1] - a0[1]);
+            double detA = 0;
+            double detB = 0;
+
+            double t0 = detA / denom;
+            double t1 = detB / denom;
+
+            double[] pA = new double[2];// Projected closest point on segment A
+            pA[0] = a0[0] + _A[0] * t0;
+            pA[1] = a0[1] + _A[1] * t0;
+            double[] pB = new double[2];// Projected closest point on segment B
+            pB[0] = b0[0] + _B[0] * t0;
+            pB[1] = b0[1] + _B[1] * t0;
+
+
+            // Clamp projections
+            if (clampA0 | clampA1 | clampB0 | clampB1)
+            {
+                if (clampA0 & t0 < 0)
+                {
+                    pA = a0;
+                }
+                else if (clampA1 & t0 > magA)
+                {
+                    pA = a1;
+                }
+
+                if (clampB0 & t1 < 0)
+                {
+                    pB = b0;
+                }
+                else if (clampB1 & t1 > magB)
+                {
+                    pB = b1;
+                }
+
+                // Clamp projection A
+                if ((clampA0 & t0 < 0) | (clampA1 & t0 > magA))
+                {
+                    double dot = _B[0] * (pA[0] - b0[0]) + _B[1] * (pA[1] - b0[1]);
+                    if (clampB0 & dot < 0)
+                    {
+                        dot = 0;
+                    }
+                    else if (clampB1 & dot > magB)
+                    {
+                        dot = magB;
+                        pB[0] = b0[0] + dot * _B[0];
+                        pB[1] = b0[1] + dot * _B[1];
+                    }
+                }
+                // Clamp projection B
+                if ((clampB0 & t1 < 0) | (clampB1 & t1 > magB))
+                {
+                    double dot = _A[0] * (pB[0] - a0[0]) + _A[1] * (pB[1] - a0[1]);
+                    if (clampA0 & dot < 0)
+                    {
+                        dot = 0;
+                    }
+                    else if (clampA1 & dot > magA)
+                    {
+                        dot = magA;
+                        pA[0] = a0[0] + dot * _A[0];
+                        pA[1] = a0[1] + dot * _A[1];
+                    }
+                }
+            }
+            result[0, 0] = pA[0];
+            result[0, 1] = pA[1];
+            result[1, 0] = pB[0];
+            result[1, 1] = pB[1];
+            tempx = pA[0] - pB[0];
+            tempy = pA[1] - pB[1];
+            result[2, 0] = Math.Sqrt(tempx * tempx + tempy * tempy);
+
+            return result;
+
+        }
+
+        /// <summary>
+        /// Determina si la modificación de la velocidad de uno puede afectar directamente al otro, generando conflictos
+        /// </summary>
+        /// <param name="b"></param>
+        /// <returns></returns>
+        public double[] Interaction(FlightPlan b, double distanciaSeguridad)
+        {
+            double[,] data = new double[3, 2];
+            data = this.ShortestDistanceBetweenPaths(b, true);
+            //bool defined = true;
+            //try
+            //{
+            //    double[] p0 = new double[2];
+            //    p0[0] = data[0, 0];
+            //    p0[1] = data[0, 1];
+            //    double[] p1 = new double[2];
+            //    p1[0] = data[1, 0];
+            //    p1[1] = data[1, 1];
+            //}
+            //catch (Exception ex)
+            //{
+            //    defined = false;
+            //}
+            double d = data[2, 0];
+            double[] result = new double[2];
+            result[0] = d;
+            result[1] = Convert.ToDouble(d <= distanciaSeguridad);
+            return result;
+        }
+
+        /// <summary>
+        /// Determinal la distancia minima entre aviones en funcion de sus velocidades y si estos entran en conflicto.
+        /// </summary>
+        /// <param name="b"></param>
+        /// <param name="distanciaSeguridad"></param>
+        /// <param name="minimumDistance2"> por defecto es -1 y implica que se quiere recalcular la misma</param>
+        /// <returns>[distancia,conflicto]: conflicto es 0 o 1</returns>
+        public double[] Conflicto(FlightPlan b, double distanciaSeguridad, double minimumDistance2 = -1)
+        {
+            if(minimumDistance2 < 0)
+            {
+                // preparamos las variables de este avion
+                double vf = this.velocidad;
+                double hipotenusaf = Math.Sqrt((finalPosition.GetX() - currentPosition.GetX()) * (finalPosition.GetX() - currentPosition.GetX()) +
+                                                (finalPosition.GetY() - currentPosition.GetY()) * (finalPosition.GetY() - currentPosition.GetY()));
+                double cosenof = (finalPosition.GetX() - currentPosition.GetX()) / hipotenusaf;
+                double senof = (finalPosition.GetY() - currentPosition.GetY()) / hipotenusaf;
+                double vfx = vf * cosenof;
+                double vfy = vf * senof;
+                double vfx2 = vfx * vfx;
+                double vfy2 = vfy * vfy;
+                double xf0 = this.currentPosition.GetX();
+                double yf0 = this.currentPosition.GetY();
+
+                // preparamos las variables del avion b
+
+                double vg = b.velocidad;
+                double hipotenusag = Math.Sqrt((b.finalPosition.GetX() - b.currentPosition.GetX()) * (b.finalPosition.GetX() - b.currentPosition.GetX()) +
+                                                (b.finalPosition.GetY() - b.currentPosition.GetY()) * (b.finalPosition.GetY() - b.currentPosition.GetY()));
+                double cosenog = (b.finalPosition.GetX() - b.currentPosition.GetX()) / hipotenusag;
+                double senog = (b.finalPosition.GetY() - b.currentPosition.GetY()) / hipotenusag;
+                double vgx = vg * cosenog;
+                double vgy = vg * senog;
+                double vgx2 = vgx * vgx;
+                double vgy2 = vgy * vgy;
+                double xg0 = b.currentPosition.GetX();
+                double yg0 = b.currentPosition.GetY();
+                // Parte paralela al eje x
+                double fracX1 = (
+                    vfx * (-vfx * xf0 + vfx * xg0 - vfy * yf0 + vfy * yg0 + vgx * xf0 - vgx * xg0 + vgy * yf0 - vgy * yg0) /
+                    (vfx2 - 2 * vfx * vgx + vfy2 - 2 * vfy * vgy + vgx2 + vgy2)
+                    );
+                double fracX2 = (
+                    vgx * (-vfx * xf0 + vfx * xg0 - vfy * yf0 + vfy * yg0 + vgx * xf0 - vgx * xg0 + vgy * yf0 - vgy * yg0) /
+                    (vfx2 - 2 * vfx * vgx + vfy2 - 2 * vfy * vgy + vgx2 + vgy2)
+                    );
+                double xSide = (fracX1 - fracX2 + xf0 - xg0) * (fracX1 - fracX2 + xf0 - xg0);
+                // Parte paralela al eje y
+                double fracY1 = (
+                    vfy * (-vfx * xf0 + vfx * xg0 - vfy * yf0 + vfy * yg0 + vgx * xf0 - vgx * xg0 + vgy * yf0 - vgy * yg0) /
+                    (vfx2 - 2 * vfx * vgx + vfy2 - 2 * vfy * vgy + vgx2 + vgy2)
+                    );
+
+                double fracY2 = (
+                    vgy * (-vfy * xf0 + vfx * xg0 - vfy * yf0 + vfy * yg0 + vgx * xf0 - vgx * xg0 + vgy * yf0 - vgy * yg0) /
+                    (vfx2 - 2 * vfx * vgx + vfy2 - 2 * vfy * vgy + vgx2 + vgy2)
+                    );
+                double ySide = (fracY1 - fracY2 + yf0 - yg0) * (fracY1 - fracY2 + yf0 - yg0);
+
+                // distancia minima ^2 
+
+                minimumDistance2 = xSide + ySide;
+            }
+
+
+            // si la distancia minima ^2 es menor o igual a la distancia de seguridad, se produce un conflicto y devulve true
+            double[] result= new double[2];
+            result[0] = minimumDistance2;
+            result[1] = Convert.ToDouble(minimumDistance2 <= (distanciaSeguridad * distanciaSeguridad));
+            return result;
+
+
         }
         public void EscribeConsola()
         // escribe en consola los datos del plan de vuelo
@@ -88,6 +412,6 @@ namespace FlightLib
             }
             Console.WriteLine("******************************");
         }
-        
+
     }
 }
