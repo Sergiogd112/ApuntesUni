@@ -28,7 +28,7 @@ output:
 
 | Fracture                     | Fatigue                                                           | Diffusion                                                 | Creep                                                  |
 | ---------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------ |
-| $K_c=Y\sigma_c\sqrt{\pi a}$  | $\sigma_m=\frac{\sigma_{max}+\sigma_{min}}{2}$                    | $N_\upsilon=N_0\exp(-\frac{Q}{kT})$                       | $\dot{\varepsilon}_s=K_1\sigma^n$   |
+| $K_c=Y\sigma_c\sqrt{\pi a}$  | $\sigma_m=\frac{\sigma_{max}+\sigma_{min}}{2}$                    | $N_\upsilon=N_0\exp(-\frac{Q}{kT})$                       | $\dot{\varepsilon}_s=K_1\sigma^n$                      |
 | $K_{Ic}=Y\sigma\sqrt{\pi a}$ | $\sigma_r=\sigma_{max}-\sigma_{min}$                              | $J=\frac{1}{A}\frac{dM}{dt}$                              | $\dot{\varepsilon}_s=K_2\sigma^n\exp(-\frac{Q_c}{RT})$ |
 | A3                           | $\sigma_a=\frac{\sigma_{max}-\sigma_{min}}{2}=\frac{\sigma_r}{2}$ | $J=-D\frac{dC}{dx}$                                       |                                                        |
 | A3                           | $R=\frac{\sigma_{min}}{\sigma_{max}}$                             | $\frac{\delta C}{\delta t}=D\frac{\delta^2C}{\delta x^2}$ |                                                        |
