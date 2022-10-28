@@ -28,21 +28,48 @@ namespace FlightLib
             this.finalPosition = new Position(fpx, fpy);
             this.velocidad = velocidad;
         }
+
+        /// <summary>
+        /// Getter del identificador
+        /// </summary>
+        /// <returns>Identificador</returns>
         public string GetId()
         {
             return this.id;
         }
-        // Metodos
+        /// <summary>
+        /// Getter de la velocidad
+        /// </summary>
+        /// <returns>velocidad</returns>
+        public double GetVelocidad()
+        {
+            return this.velocidad;
+        }
+
+        /// <summary>
+        /// Setter de la velocidad
+        /// </summary>
+        /// <param name="velocidad"></param>
         public void SetVelocidad(double velocidad)
-        // setter del atributo velocidad
-        { this.velocidad = velocidad; }
+        {
+            this.velocidad = velocidad;
+        }
+
+        /// <summary>
+        /// Calcula la distancia entre la posicion actual y destino
+        /// </summary>
+        /// <returns>Distancia al destino</returns>
         public double getDistanciaDestino()
         {
             return Math.Sqrt((this.finalPosition.GetX() - this.currentPosition.GetX()) * (this.finalPosition.GetX() - this.currentPosition.GetX()) +
                                             (this.finalPosition.GetY() - this.currentPosition.GetY()) * (this.finalPosition.GetY() - currentPosition.GetY()));
         }
+
+        /// <summary>
+        /// Desplaza el avion durante un tiempo dado
+        /// </summary>
+        /// <param name="tiempo">numero de segundos</param>
         public void Mover(double tiempo)
-        // Mueve el vuelo a la posición correspondiente a viajar durante el tiempo que se recibe como parámetro
         {
             //Calculamos la distancia recorrida en el tiempo dado
             double distancia = tiempo * this.velocidad / 60;
@@ -66,6 +93,11 @@ namespace FlightLib
                 this.currentPosition = this.finalPosition;
             }
         }
+        
+        /// <summary>
+        /// Comprueva si el avion está en destino
+        /// </summary>
+        /// <returns>true si esta en destinos</returns>
         public bool EstaDestino()
         {
             return this.currentPosition == this.finalPosition;
@@ -75,13 +107,13 @@ namespace FlightLib
         /// Determina la distancia mas corta entre trayectorias. Convertido de Python a C//.
         /// Codigo original en: https://stackoverflow.com/questions/2824478/shortest-distance-between-two-line-segments
         /// </summary>
-        /// <param name="b"></param>
-        /// <param name="clampAll"></param>
-        /// <param name="clampA0"></param>
-        /// <param name="clampA1"></param>
-        /// <param name="clampB0"></param>
-        /// <param name="clampB1"></param>
-        /// <returns></returns>
+        /// <param name="b">Segundo avion</param>
+        /// <param name="clampAll">Si solo se pueden coger puntos dentro de los segmentos</param>
+        /// <param name="clampA0">Puntos a la distancia no antes de la inicial de este avion</param>
+        /// <param name="clampA1">Puntos a la distancia no despues de la final de este avion</param>
+        /// <param name="clampB0">Puntos a la distancia no antes de la inicial del otro avion</param>
+        /// <param name="clampB1">Puntos a la distancia no despues de la final del otro avion</param>
+        /// <returns>[primer punto, segundo punto, [distancia minima,(no assignado)]]</returns>
         public double[,] ShortestDistanceBetweenPaths(FlightPlan b, bool clampAll = false,
                                                         bool clampA0 = false, bool clampA1 = false,
                                                         bool clampB0 = false, bool clampB1 = false,
@@ -154,7 +186,7 @@ namespace FlightLib
                     // Is segment B before A?
                     if (d0 <= 0 && 0 >= d1)
                     {
-                        if (clampA0 & clampB1)
+                        if (clampA0 && clampB1)
                         {
                             if (Math.Abs(d0) < Math.Abs(d1))
                             {
@@ -174,9 +206,9 @@ namespace FlightLib
                         }
                     }
                     // Is segment B after A?
-                    else if (d0 >= magA & magA <= d1)
+                    else if (d0 >= magA && magA <= d1)
                     {
-                        if (clampA1 & clampB0)
+                        if (clampA1 && clampB0)
                         {
                             if (Math.Abs(d0) < Math.Abs(d1))
                             {
@@ -294,12 +326,12 @@ namespace FlightLib
         /// <summary>
         /// Determina si la modificación de la velocidad de uno puede afectar directamente al otro, generando conflictos
         /// </summary>
-        /// <param name="b"></param>
-        /// <returns></returns>
-        public double[] Interaction(FlightPlan b, double distanciaSeguridad)
+        /// <param name="b">segundo avion</param>
+        /// <returns>[distancia minima, interaccionan(0 o 1)]</returns>
+        public double[] Interaction(FlightPlan b, double distanciaSeguridad,bool clamp=true)
         {
             double[,] data = new double[3, 2];
-            data = this.ShortestDistanceBetweenPaths(b, true);
+            data = this.ShortestDistanceBetweenPaths(b, clamp);
             //bool defined = true;
             //try
             //{
@@ -317,25 +349,31 @@ namespace FlightLib
             double d = data[2, 0];
             double[] result = new double[2];
             result[0] = d;
-            result[1] = Convert.ToDouble(d <= distanciaSeguridad);
+            if (d <= distanciaSeguridad)
+            {
+                result[1] = 1;
+            }
+            else
+            {
+                result[1] = 0;
+            }
             return result;
         }
 
         /// <summary>
         /// Determinal la distancia minima entre aviones en funcion de sus velocidades y si estos entran en conflicto.
         /// </summary>
-        /// <param name="b"></param>
-        /// <param name="distanciaSeguridad"></param>
+        /// <param name="b">segundo avion</param>
+        /// <param name="distanciaSeguridad">distancia de seguridad</param>
         /// <param name="minimumDistance2"> por defecto es -1 y implica que se quiere recalcular la misma</param>
         /// <returns>[distancia,conflicto]: conflicto es 0 o 1</returns>
         public double[] Conflicto(FlightPlan b, double distanciaSeguridad, double minimumDistance2 = -1)
         {
-            if(minimumDistance2 < 0)
+            if (minimumDistance2 < 0)
             {
                 // preparamos las variables de este avion
                 double vf = this.velocidad;
-                double hipotenusaf = Math.Sqrt((finalPosition.GetX() - currentPosition.GetX()) * (finalPosition.GetX() - currentPosition.GetX()) +
-                                                (finalPosition.GetY() - currentPosition.GetY()) * (finalPosition.GetY() - currentPosition.GetY()));
+                double hipotenusaf = this.getDistanciaDestino();
                 double cosenof = (finalPosition.GetX() - currentPosition.GetX()) / hipotenusaf;
                 double senof = (finalPosition.GetY() - currentPosition.GetY()) / hipotenusaf;
                 double vfx = vf * cosenof;
@@ -348,8 +386,7 @@ namespace FlightLib
                 // preparamos las variables del avion b
 
                 double vg = b.velocidad;
-                double hipotenusag = Math.Sqrt((b.finalPosition.GetX() - b.currentPosition.GetX()) * (b.finalPosition.GetX() - b.currentPosition.GetX()) +
-                                                (b.finalPosition.GetY() - b.currentPosition.GetY()) * (b.finalPosition.GetY() - b.currentPosition.GetY()));
+                double hipotenusag = b.getDistanciaDestino();
                 double cosenog = (b.finalPosition.GetX() - b.currentPosition.GetX()) / hipotenusag;
                 double senog = (b.finalPosition.GetY() - b.currentPosition.GetY()) / hipotenusag;
                 double vgx = vg * cosenog;
@@ -367,7 +404,7 @@ namespace FlightLib
                     vgx * (-vfx * xf0 + vfx * xg0 - vfy * yf0 + vfy * yg0 + vgx * xf0 - vgx * xg0 + vgy * yf0 - vgy * yg0) /
                     (vfx2 - 2 * vfx * vgx + vfy2 - 2 * vfy * vgy + vgx2 + vgy2)
                     );
-                double xSide = (fracX1 - fracX2 + xf0 - xg0) * (fracX1 - fracX2 + xf0 - xg0);
+                double xSide2 = (fracX1 - fracX2 + xf0 - xg0) * (fracX1 - fracX2 + xf0 - xg0);
                 // Parte paralela al eje y
                 double fracY1 = (
                     vfy * (-vfx * xf0 + vfx * xg0 - vfy * yf0 + vfy * yg0 + vgx * xf0 - vgx * xg0 + vgy * yf0 - vgy * yg0) /
@@ -378,22 +415,33 @@ namespace FlightLib
                     vgy * (-vfy * xf0 + vfx * xg0 - vfy * yf0 + vfy * yg0 + vgx * xf0 - vgx * xg0 + vgy * yf0 - vgy * yg0) /
                     (vfx2 - 2 * vfx * vgx + vfy2 - 2 * vfy * vgy + vgx2 + vgy2)
                     );
-                double ySide = (fracY1 - fracY2 + yf0 - yg0) * (fracY1 - fracY2 + yf0 - yg0);
+                double ySide2 = (fracY1 - fracY2 + yf0 - yg0) * (fracY1 - fracY2 + yf0 - yg0);
 
                 // distancia minima ^2 
 
-                minimumDistance2 = xSide + ySide;
+                minimumDistance2 = xSide2 + ySide2;
             }
 
 
             // si la distancia minima ^2 es menor o igual a la distancia de seguridad, se produce un conflicto y devulve true
-            double[] result= new double[2];
+            double[] result = new double[2];
             result[0] = minimumDistance2;
-            result[1] = Convert.ToDouble(minimumDistance2 <= (distanciaSeguridad * distanciaSeguridad));
+            if (minimumDistance2 <= (distanciaSeguridad * distanciaSeguridad))
+            {
+                result[1] = 1;
+            }
+            else
+            {
+                result[1] = 0;
+            }
             return result;
 
 
         }
+        
+        /// <summary>
+        /// Escribe los datos del FligthPlan por consola
+        /// </summary>
         public void EscribeConsola()
         // escribe en consola los datos del plan de vuelo
         {

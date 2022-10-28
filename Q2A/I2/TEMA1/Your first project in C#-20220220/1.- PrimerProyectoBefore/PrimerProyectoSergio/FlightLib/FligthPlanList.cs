@@ -4,16 +4,33 @@ using System.Text;
 
 namespace FlightLib
 {
+    /// <summary>
+    /// Clase en la que se guarda una lista de FligthPlans y como se afectan los unos a los otros.
+    /// </summary>
     public class FligthPlanList
     {
-        private int len = 0;
-        const int maxLen = 100;
-        private FlightPlan[] flights = new FlightPlan[maxLen];
-        private bool[,] interactions = new bool[maxLen, maxLen];
-        private double[,] mind = new double[maxLen, maxLen];
-        private bool[,] conflicts = new bool[maxLen, maxLen];
-        private double[,] confd = new double[maxLen, maxLen];
-        private double distanciaSeguridad = 0.0;
+        private int len;
+        const int maxLen = 1000;
+        private FlightPlan[] flights;
+        private bool[,] interactions;
+        private double[,] mind;
+        private bool[,] conflicts;
+        private double[,] confd;
+        private double distanciaSeguridad;
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public FligthPlanList()
+        {
+            this.len = 0;
+            this.flights = new FlightPlan[maxLen];
+            this.interactions = new bool[maxLen, maxLen];
+            this.conflicts = new bool[maxLen, maxLen];
+            this.mind = new double[maxLen, maxLen];
+            this.confd = new double[maxLen, maxLen];
+            this.distanciaSeguridad = 0.0;
+        }
 
         /// <summary>
         /// Leer el numero de FligthPlans añadidos a la lista
@@ -23,6 +40,7 @@ namespace FlightLib
         {
             return len;
         }
+
         /// <summary>
         /// Leer la distancia de seguridad
         /// </summary>
@@ -31,6 +49,7 @@ namespace FlightLib
         {
             return this.distanciaSeguridad;
         }
+
         /// <summary>
         /// Modificar la distancia de seguridad. Usa el valor absoluto
         /// </summary>
@@ -40,6 +59,7 @@ namespace FlightLib
 
             this.distanciaSeguridad = Math.Abs(d);
         }
+
         /// <summary>
         /// Leer el FligthPlan en un indice
         /// </summary>
@@ -53,6 +73,7 @@ namespace FlightLib
             }
             return flights[index];
         }
+
         /// <summary>
         /// Añadir un FligthPlan
         /// </summary>
@@ -68,6 +89,7 @@ namespace FlightLib
             this.len++;
             return this.len;
         }
+
         /// <summary>
         /// Añadir un FligthPlan desde consola
         /// </summary>
@@ -137,23 +159,42 @@ namespace FlightLib
             if (checkInteractions)
             {
                 this.CheckInteractions();
+                this.CheckConflicts();
             }
             return fligth;
         }
+
         /// <summary>
         /// Añade n FligthPlans desde consola
         /// </summary>
         /// <param name="nAviones"></param>
         public void AddNConsole(int nAviones)
         {
-            int i = 0;
-            while (i < nAviones)
+            for (int i = 0; i < this.len; i++)
             {
                 this.AddFromConsole(false);
-                i++;
             }
             this.CheckInteractions();
+            this.CheckConflicts();
         }
+        public void AddFromfile(string filename)
+        {
+            string[] lines = System.IO.File.ReadAllLines(filename);
+            string[] data = new string[6];
+            double[] coordsAndSpeed = new double[5];
+            foreach (string line in lines)
+            {
+                data = line.Split(' ');
+                for (int j = 1; j < data.Length; j++)
+                {
+                    coordsAndSpeed[j - 1] = Convert.ToDouble(data[j]);
+                }
+                this.AddFligthPlan(new FlightPlan(data[0], coordsAndSpeed[0], coordsAndSpeed[1], coordsAndSpeed[2], coordsAndSpeed[3], coordsAndSpeed[4]));
+            }
+            this.CheckInteractions();
+            this.CheckConflicts();
+        }
+
         /// <summary>
         /// Comprueva las minimas distancias posibles entre aviones(independiente de velocidad)
         /// para determinar si la modificacion de la velocidad de uno puede generar un conflicto.
@@ -164,89 +205,147 @@ namespace FlightLib
         /// </summary>
         public void CheckInteractions()
         {
-            int i = 0;
-            int j = 0;
             double[] data = new double[2];
-            while (i < len)
+            for (int i = 0; i < this.len; i++)
             {
-                j = i;
-                while (j < len)
+                for (int j = i; j < this.len; j++)
                 {
-                    data = this.flights[i].Interaction(this.flights[j], this.distanciaSeguridad);
-                    this.interactions[i, j] = Convert.ToBoolean(data[1]);
-                    this.interactions[j, i] = this.interactions[i, j];
+                    data = this.flights[i].Interaction(this.flights[j], this.distanciaSeguridad, true);
+                    this.interactions[i, j] = Math.Abs(data[0]) <= this.distanciaSeguridad;
+                    Console.WriteLine("{0} and {1} are at {2} and is {3}", this.flights[i].GetId(), this.flights[j].GetId(),
+                        data[0], data[0] <= this.distanciaSeguridad);
+                    this.interactions[j, i] = Math.Abs(data[0]) <= this.distanciaSeguridad;
                     this.mind[i, j] = data[0];
                     this.mind[j, i] = data[0];
-                    j++;
                 }
-                i++;
             }
         }
+
+        /// <summary>
+        /// Comprueva si dos aviones interaccionan y si lo hacen, comprueva si entran en conflicto
+        /// </summary>
+        public void CheckConflicts(bool checkAll = false)
+        {
+            double[] data = new double[2];
+            for (int i = 0; i < this.len; i++)
+            {
+                for (int j = i; j < this.len; j++)
+                {
+                    if (this.interactions[i, j] || checkAll)
+                    {
+                        data = this.flights[i].Conflicto(this.flights[j], this.distanciaSeguridad);
+                        this.conflicts[i, j] = data[0] <= this.distanciaSeguridad * this.distanciaSeguridad;
+                        this.conflicts[j, i] = data[0] <= this.distanciaSeguridad * this.distanciaSeguridad;
+                        this.confd[i, j] = data[0];
+                        this.confd[j, i] = data[0];
+                    }
+                    else
+                    {
+                        this.conflicts[i, j] = false;
+                        this.conflicts[j, i] = false;
+                        this.confd[i, j] = this.mind[i, j];
+                        this.confd[j, i] = this.mind[i, j];
+                    }
+
+                }
+            }
+        }
+
         /// <summary>
         /// Mueve todos los aviones n moves
         /// </summary>
         /// <param name="moves"></param>
         public void MoveAll(int moves)
         {
-            int i = 0;
-            while (i < this.len)
+            for (int i = 0; i < this.len; i++)
             {
                 this.flights[i].Mover(10);
-                i++;
             }
         }
+
         /// <summary>
         /// Escribe todos los FligthPlans por consola
         /// </summary>
         public void WriteFligthPlans()
         {
-            int i = 0;
-            while (i < this.len)
+            for (int i = 0; i < this.len; i++)
             {
                 this.flights[i].EscribeConsola();
-                i++;
             }
         }
+
         /// <summary>
         /// Escribe la tabla de interacciones en la consola
         /// </summary>
         public void WriteInteractions()
         {
-            int i = 0;
-            int j;
             string row, separator;
-            while (i < this.len)
+            for (int i = 0; i < this.len; i++)
             {
-                j = 1;
                 if (interactions[i, 0])
                 {
-                    row = "T";
+                    row = "|X";
                 }
                 else
                 {
-                    row = "F";
+                    row = "|-";
                 }
 
                 separator = "-";
-                while (j < this.len)
+                for (int j = 1; j < this.len; j++)
                 {
 
                     if (interactions[i, j])
                     {
-                        row += "T";
+                        row += "|X";
                     }
                     else
                     {
-                        row += "F";
+                        row += "|-";
                     }
                     separator += "+-";
-                    j++;
                 }
                 Console.WriteLine(row);
                 Console.WriteLine(separator);
-                i++;
             }
         }
+
+        /// <summary>
+        /// Escribe una tabla con los conflictos entre aviones
+        /// </summary>
+        public void WriteConflicts()
+        {
+            string row, separator;
+            for (int i = 0; i < this.len; i++)
+            {
+                if (this.conflicts[i, 0])
+                {
+                    row = "|X";
+                }
+                else
+                {
+                    row = "|-";
+                }
+
+                separator = "-";
+                for (int j = 1; j < this.len; j++)
+                {
+
+                    if (this.conflicts[i, j])
+                    {
+                        row += "|X";
+                    }
+                    else
+                    {
+                        row += "|-";
+                    }
+                    separator += "+-";
+                }
+                Console.WriteLine(row);
+                Console.WriteLine(separator);
+            }
+        }
+
         /// <summary>
         /// Escribe toda la informacion del objeto FligthList
         /// </summary>
@@ -255,7 +354,10 @@ namespace FlightLib
             Console.WriteLine("Distancia de seguridad: {0}", this.distanciaSeguridad);
             Console.WriteLine("Numero de aviones: {0}", this.len);
             this.WriteFligthPlans();
+            Console.WriteLine("Interacciones:");
             this.WriteInteractions();
+            Console.WriteLine("Conflictos:");
+            this.WriteConflicts();
         }
     }
 }
