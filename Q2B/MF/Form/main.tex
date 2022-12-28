@@ -1,0 +1,152 @@
+
+\documentclass{article}
+\usepackage[landscape]{geometry}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{esint}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
+\usepackage{amsmath,amssymb}
+\usepackage{derivative}
+
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\makeatletter
+
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+
+\title{Formulario MF}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+
+\advance\topmargin-.8in
+\advance\textheight3in
+\advance\textwidth3in
+\advance\oddsidemargin-1.5in
+\advance\evensidemargin-1.5in
+\parindent0pt
+\parskip2pt
+\newcommand{\hr}{\centerline{\rule{3.5in}{1pt}}}
+%\colorbox[HTML]{e4e4e4}{\makebox[\textwidth-2\fboxsep][l]{texto}
+\begin{document}
+
+\begin{center}{\huge{\textbf{Formulario MF}}}\\
+\end{center}
+\begin{multicols*}{3}
+
+\tikzstyle{mybox} = [draw=black, fill=white, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=10pt]
+\tikzstyle{fancytitle} =[fill=black, text=white, font=\bfseries]
+
+%------------ Basic ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    $p=\rho R T; R_{air}=287J/kgK$\\
+    $p_2-p_1=-\rho g(z_2-z_1)$\\
+    $\gamma=\rho g$\\
+    $F_b=\gamma V_{displaced}$
+    $\rho=\frac{dm}{dV}$\\\
+    $p_{gauge}=p-p_a$\\
+    $p_{vac}=p_a-p$\\
+    $\nabla=(\pdv{}{x},\pdv{}{y},\pdv{}{z})$
+    \end{minipage}
+};
+%------------ Basic Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Basic equations};
+\end{tikzpicture}
+
+%------------ Tema 1 ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    $\tau=\mu \frac{\delta \theta}{\delta t}=\mu \frac{\delta \theta}{\delta y}$\\
+    $\vartheta=\frac{\mu}{\rho}$\\
+    $Re=\frac{\rho LV}{\mu}$\\
+    $f(x,y,z) ; \frac{df}{dt}=0 \Box$\\
+    $F=p_aA+\gamma h_{CG}A=(p_a+\gamma h_{CG})A=p_{CG}A \Box$--\\
+    $F=F_v+F_h \Box \approx $\\
+    $u(y)=\mu\frac{du}{dy}$\\
+    Multi-fluid\\
+    $u_1(y)=a_1y+b_1$\\
+    $u_2(y)=a_2y+b_2$\\
+    $\mu_1a_1=\mu_2a_2\text{ and } b_1=b_2$\\
+    $u_1(y)=\frac{2V\mu_2}{\mu_1+\mu_2}\frac{y}{h}+\frac{V(\mu_2-\mu_1}{\mu_1+\mu_2}$\\
+    $u_2(y)=\frac{2V\mu_1}{\mu_1+\mu_2}\frac{y}{h}+\frac{V(\mu_2-\mu_1}{\mu_1+\mu_2}$\\
+    $u_1(0)=u_2(0)=\frac{V(\mu_2-\mu_1}{\mu_1+\mu_2}$
+    \end{minipage}
+};
+%------------ Tema 1 Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Tema 1};
+\end{tikzpicture}
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+%------------ Tema 2 ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    $dV=(V\cdot n)dAdt=VdAdt\cos{\theta}$\\
+    $Q=\int_S(V\cdot n)dA$\\
+    $\dot{m}=\int_S\rho(V\cdot n)dA$\\
+    $ds\times V=0\Rightarrow\frac{dx}{u}=\frac{dy}{v}=\frac{dz}{w}$\\
+    $\frac{dy}{dx}=\frac{v}{u}$\\
+    $\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}=\nabla\cdot \vec{V}\Box 0$\\
+    ------\\
+    $\Psi(x,y)\Rightarrow u=\frac{\partial \Psi}{\partial y}; v=-\frac{\partial \Psi}{\partial x}$\\
+    $V_r=\frac{1}{r}\frac{\partial\Psi}{\partial\theta}$\\
+    $V_\theta=-\frac{\partial\Psi}{\partial r}$\\
+    $\frac{dy}{dx}=\frac{v}{u}\Rightarrow\Psi(x,y)=c$\\
+    ------\\
+    $\xi=2\omega=\nabla\times V =\\=[(\frac{\partial w}{\partial y }-\frac{\partial v}{\partial z})i+(\frac{\partial u}{\partial z }-\frac{\partial w}{\partial x})j+(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y})k]\Box 0$\\
+    ---\\
+    $D_{xy}=\frac{1}{2}(\pdv{u}{y}+\pdv{v}{x})$\\
+    $D_{xz}=\frac{1}{2}(\pdv{u}{z}+\pdv{w}{x})$\\
+    $D_{yz}=\frac{1}{2}(\pdv{v}{z}+\pdv{w}{y})$\\
+    --\\
+    $D_{xx}=\pdv{u}{x}$\\
+    $D_{yy}=\pdv{v}{y}$\\
+    $D_{yy}=\pdv{w}{z}$\\
+    $\vec{V}(\vec{r}+\vec{dr})=\vec{V}(\vec{r}) + [\frac{1}{2}(\nabla\vec{V}-\nabla\vec{V}^T)]\vec{dr}+[\frac{1}{2}(\nabla\vec{V}+\nabla\vec{V}^T)]\vec{dr}$\\
+    -----\\
+    $\Gamma=-\oint_C V\cdot ds=-\iint_S(\nabla\times V)\cdot dS$\\
+    ------\\
+    $\xi=\nabla\times\vec{V}=0\Rightarrow V=\nabla\phi$\\
+    $u=\pdv{\phi}{x}; v=\pdv{\phi}{y};w=\pdv{phi}{z}$\\
+    $V_r=\pdv{\phi}{r}; V_\theta=\frac{1}{r}\pdv{\phi}{\theta};V_z=\pdv{\phi}{z}$
+    \end{minipage}
+};
+%------------ Tema 2 Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Tema 2};
+\end{tikzpicture}
+%------------ Tema 3 ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    $\frac{d}{dt}(B_{sys})=\frac{d}{dt}(\int_{CV}\beta\rho d\vartheta)+(\beta\rho AV)_{out}-(\beta\rho AV)_{in}$\\
+    1. rate of change of B (0 steady)\\
+    2. flux in and out\\
+    3. $\vartheta$ is volume\\
+    $\frac{d}{dt}(B_{sys})=\frac{d}{dt}(\int_{CV}\beta\rho d\vartheta)+\int_{CS}(\beta\rho V\cos\theta dA)_{out}-\int_{CS}(\beta\rho V\cos\theta dA)_{in}$\\
+    $\frac{d}{dt}(B_{sys})=\frac{d}{dt}(\int_{CV}\beta\rho d\vartheta)+\int_{CS}(\beta\rho (V\cdot n) dA)$\\
+    Conservation of mass:
+    Deformable CV:\\
+    $(\frac{dm}{dt})_{\text{sys}}=0=\frac{d}{dt}(\int_{CV}\rho d\vartheta)+\int_{CS}(\rho (V\cdot n) dA)$\\
+    Fixed CV:\\
+    $0=\int_{CV}\frac{d\rho}{dt} d\vartheta+\int_{CS}(\rho (V\cdot n) dA)$\\
+    \end{minipage}
+};
+%------------ Tema 3 Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Tema 3};
+\end{tikzpicture}
+\end{multicols*}
+\end{document}
+
+
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status Help
